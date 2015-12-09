@@ -77,6 +77,16 @@ let typeNames = nameList => {
   return toOrSentence(nameList);
 };
 
+Template.apiBoxTitle.helpers({
+  nameContainsBraces: function(){
+    if (this.longname.indexOf('{') > -1) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+});
+
 Template.autoApiBox.helpers({
   apiData: apiData,
   signature() {

@@ -198,6 +198,1064 @@ DocsData = {
     "summary": "Checks that the user has the specified type of role.",
     "version": "1.2.3"
   },
+  "AutoForm.addFormType": {
+    "access": "public",
+    "definition": [
+      {
+        "description": "<p>A function that accepts a single argument, which is the context with which an input template in the form will be called, potentially changes the context object, and then returns it. For example, the &quot;readonly&quot; and &quot;disabled&quot; form types use this function to add the &quot;readonly&quot; or &quot;disabled&quot; attribute, respectively, to every input within the form.</p>",
+        "name": "adjustInputContext",
+        "optional": true,
+        "type": {
+          "names": [
+            "function"
+          ]
+        }
+      },
+      {
+        "description": "<p>A function that accepts a single argument, which is the form schema, and potentially uses that to return a different schema to use instead. For example, the &quot;update-pushArray&quot; form type uses this function to build and return a schema that is limited by the <code>scope</code> attribute on the form. When this function is called, <code>this</code> contains useful information about the form.</p>",
+        "name": "adjustSchema",
+        "optional": true,
+        "type": {
+          "names": [
+            "function"
+          ]
+        }
+      },
+      {
+        "description": "<p>Set to <code>true</code> if this form type should not show buttons for adding and removing items in an array field. The &quot;disabled&quot; and &quot;readonly&quot; form types do this.</p>",
+        "name": "hideArrayItemButtons",
+        "optional": true,
+        "type": {
+          "names": [
+            "Boolean"
+          ]
+        }
+      },
+      {
+        "description": "<p>A function that does whatever should happen upon submission of this form type. When this function is called, <code>this</code> contains useful information about the form. At a minimum, you probably want to call <code>this.event.preventDefault()</code> to prevent the browser from submitting the form. Your submission logic may want to rely on additional custom form attributes, which will be available in <code>this.formAttributes</code>. If you do any additional validation and it fails, you should call <code>this.failedValidation()</code>. When your logic is done, you should call <code>this.result(error, result)</code>. If you want to end the submission process without providing a result, call <code>this.endSubmission()</code>. If you don't call <code>this.result()</code> or <code>this.endSubmission()</code>, <code>endSubmit</code> hooks won't be called, so for example the submit button might remain disabled. <code>onError</code> hooks will be called only if you pass an error to <code>this.result()</code>. <code>onSuccess</code> hooks will be called only if you do not pass an error to <code>this.result()</code>.</p>",
+        "name": "onSubmit",
+        "type": {
+          "names": [
+            "function"
+          ]
+        }
+      },
+      {
+        "description": "<p>A function that returns <code>true</code> if validation against the form schema should happen before the <code>onSubmit</code> function is called, or <code>false</code> if not. When this function is called, <code>this</code> contains useful information about the form. If this function is not provided for a form type, the default is <code>true</code>.</p>",
+        "name": "shouldPrevalidate",
+        "optional": true,
+        "type": {
+          "names": [
+            "function"
+          ]
+        }
+      },
+      {
+        "description": "<p>A function that validates the form and returns <code>true</code> if valid or <code>false</code> if not. This can happen during submission but also at other times. When this function is called, <code>this</code> contains useful information about the form and the validation options.</p>",
+        "name": "validateForm",
+        "type": {
+          "names": [
+            "function"
+          ]
+        }
+      }
+    ],
+    "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-autoform/client/autoform-api.js",
+    "kind": "function",
+    "lineno": 572,
+    "longname": "AutoForm.addFormType",
+    "memberof": "AutoForm",
+    "name": "addFormType",
+    "params": [
+      {
+        "description": "<p>The type string that this definition is for.</p>",
+        "name": "name",
+        "type": {
+          "names": [
+            "String"
+          ]
+        }
+      },
+      {
+        "description": "<p>Defines how the submit type should work</p>",
+        "name": "definition",
+        "type": {
+          "names": [
+            "Object"
+          ]
+        }
+      }
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "undefined"
+          ]
+        }
+      }
+    ],
+    "scope": "static",
+    "summary": "Use this method to add custom form types."
+  },
+  "AutoForm.addHooks": {
+    "access": "public",
+    "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-autoform/client/autoform-api.js",
+    "kind": "function",
+    "lineno": 13,
+    "longname": "AutoForm.addHooks",
+    "memberof": "AutoForm",
+    "name": "addHooks",
+    "params": [
+      {
+        "description": "<p>Form <code>id</code> or array of form IDs to which these hooks apply. Specify <code>null</code> to add hooks that will run for every form.</p>",
+        "name": "formIds",
+        "type": {
+          "names": [
+            "Array.<String>",
+            "String",
+            "null"
+          ]
+        }
+      },
+      {
+        "description": "<p>Hooks to add, where supported names are &quot;before&quot;, &quot;after&quot;, &quot;formToDoc&quot;, &quot;docToForm&quot;, &quot;onSubmit&quot;, &quot;onSuccess&quot;, and &quot;onError&quot;.</p>",
+        "name": "hooks",
+        "type": {
+          "names": [
+            "Object"
+          ]
+        }
+      }
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "undefined"
+          ]
+        }
+      }
+    ],
+    "scope": "static",
+    "summary": "Defines hooks to be used by one or more forms. Extends hooks lists if called multiple times for the same\nform."
+  },
+  "AutoForm.addInputType": {
+    "access": "public",
+    "definition": [
+      {
+        "description": "<p>The component name. A template with the name <componentName>_bootstrap3, and potentially others, must be defined.</p>",
+        "name": "componentName",
+        "type": {
+          "names": [
+            "String"
+          ]
+        }
+      }
+    ],
+    "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-autoform/client/autoform-api.js",
+    "kind": "function",
+    "lineno": 556,
+    "longname": "AutoForm.addInputType",
+    "memberof": "AutoForm",
+    "name": "addInputType",
+    "params": [
+      {
+        "description": "<p>The type string that this definition is for.</p>",
+        "name": "name",
+        "type": {
+          "names": [
+            "String"
+          ]
+        }
+      },
+      {
+        "description": "<p>Defines how the input type should be rendered.</p>",
+        "name": "definition",
+        "type": {
+          "names": [
+            "Object"
+          ]
+        }
+      }
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "undefined"
+          ]
+        }
+      }
+    ],
+    "scope": "static",
+    "summary": "Use this method to add custom input components."
+  },
+  "AutoForm.debug": {
+    "access": "public",
+    "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-autoform/client/autoform-api.js",
+    "kind": "function",
+    "lineno": 744,
+    "longname": "AutoForm.debug",
+    "memberof": "AutoForm",
+    "name": "debug",
+    "params": [],
+    "scope": "static",
+    "summary": "Call this method in client code while developing to turn on extra logging.\nYou need to call it just one time, usually in top level client code."
+  },
+  "AutoForm.findAttribute": {
+    "access": "public",
+    "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-autoform/client/autoform-api.js",
+    "kind": "function",
+    "lineno": 658,
+    "longname": "AutoForm.findAttribute",
+    "memberof": "AutoForm",
+    "name": "findAttribute",
+    "params": [
+      {
+        "description": "<p>Attribute name</p>",
+        "name": "attrName",
+        "type": {
+          "names": [
+            "String"
+          ]
+        }
+      }
+    ],
+    "returns": [
+      {
+        "description": "<p>Searches for the given attribute, looking up the parent context tree until the closest autoform is reached.</p>",
+        "type": {
+          "names": [
+            "Any",
+            "undefined"
+          ]
+        }
+      }
+    ],
+    "scope": "static",
+    "summary": "Call this method from a UI helper. Might return undefined."
+  },
+  "AutoForm.findAttributesWithPrefix": {
+    "access": "public",
+    "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-autoform/client/autoform-api.js",
+    "kind": "function",
+    "lineno": 699,
+    "longname": "AutoForm.findAttributesWithPrefix",
+    "memberof": "AutoForm",
+    "name": "findAttributesWithPrefix",
+    "params": [
+      {
+        "description": "<p>Attribute prefix</p>",
+        "name": "prefix",
+        "type": {
+          "names": [
+            "String"
+          ]
+        }
+      }
+    ],
+    "returns": [
+      {
+        "description": "<p>An object containing all of the found attributes and their values, with the prefix removed from the keys.</p>",
+        "type": {
+          "names": [
+            "Object"
+          ]
+        }
+      }
+    ],
+    "scope": "static",
+    "summary": "Call this method from a UI helper. Searches for attributes that start with the given prefix, looking up the parent context tree until the closest autoform is reached."
+  },
+  "AutoForm.getArrayCountFromDocForField": {
+    "access": "public",
+    "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-autoform/client/autoform-api.js",
+    "kind": "function",
+    "lineno": 973,
+    "longname": "AutoForm.getArrayCountFromDocForField",
+    "memberof": "AutoForm",
+    "name": "getArrayCountFromDocForField",
+    "params": [
+      {
+        "description": "<p>The form's <code>id</code> attribute</p>",
+        "name": "formId",
+        "type": {
+          "names": [
+            "String"
+          ]
+        }
+      },
+      {
+        "description": "<p>The field name (schema key)</p>",
+        "name": "field",
+        "type": {
+          "names": [
+            "String"
+          ]
+        }
+      }
+    ],
+    "returns": [
+      {
+        "description": "<p>Array count in the attached document.</p>",
+        "type": {
+          "names": [
+            "Number",
+            "undefined"
+          ]
+        }
+      }
+    ],
+    "scope": "static",
+    "summary": "Looks in the document attached to the form to see if the\nrequested field exists and is an array. If so, returns the\nlength (count) of the array. Otherwise returns undefined."
+  },
+  "AutoForm.getCurrentDataForForm": {
+    "access": "public",
+    "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-autoform/client/autoform-api.js",
+    "kind": "function",
+    "lineno": 1008,
+    "longname": "AutoForm.getCurrentDataForForm",
+    "memberof": "AutoForm",
+    "name": "getCurrentDataForForm",
+    "params": [
+      {
+        "description": "<p>The form's <code>id</code> attribute</p>",
+        "name": "formId",
+        "type": {
+          "names": [
+            "String"
+          ]
+        }
+      }
+    ],
+    "returns": [
+      {
+        "description": "<p>Current data context for the form, or an empty object.</p>",
+        "type": {
+          "names": [
+            "Object"
+          ]
+        }
+      }
+    ],
+    "scope": "static",
+    "summary": "Returns the current data context for a form.\nYou can call this without a formId from within a helper and\nthe data for the nearest containing form will be returned."
+  },
+  "AutoForm.getCurrentDataPlusExtrasForForm": {
+    "access": "public",
+    "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-autoform/client/autoform-api.js",
+    "kind": "function",
+    "lineno": 1030,
+    "longname": "AutoForm.getCurrentDataPlusExtrasForForm",
+    "memberof": "AutoForm",
+    "name": "getCurrentDataPlusExtrasForForm",
+    "params": [
+      {
+        "description": "<p>The form's <code>id</code> attribute</p>",
+        "name": "formId",
+        "optional": true,
+        "type": {
+          "names": [
+            "String"
+          ]
+        }
+      }
+    ],
+    "returns": [
+      {
+        "description": "<p>Current data context for the form, or an empty object.</p>",
+        "type": {
+          "names": [
+            "Object"
+          ]
+        }
+      }
+    ],
+    "scope": "static",
+    "summary": "Returns the current data context for a form plus some extra properties.\nYou can call this without a formId from within a helper and\nthe data for the nearest containing form will be returned."
+  },
+  "AutoForm.getFieldValue": {
+    "access": "public",
+    "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-autoform/client/autoform-api.js",
+    "kind": "function",
+    "lineno": 400,
+    "longname": "AutoForm.getFieldValue",
+    "memberof": "AutoForm",
+    "name": "getFieldValue",
+    "params": [
+      {
+        "description": "<p>The name of the field for which you want the current value.</p>",
+        "name": "fieldName",
+        "type": {
+          "names": [
+            "String"
+          ]
+        }
+      },
+      {
+        "description": "<p>The <code>id</code> attribute of the <code>autoForm</code> you want current values for. Default is the closest form from the current context.</p>",
+        "name": "formId",
+        "optional": true,
+        "type": {
+          "names": [
+            "String"
+          ]
+        }
+      }
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Any",
+            "undefined"
+          ]
+        }
+      }
+    ],
+    "scope": "static",
+    "summary": "Returns the value of the field (the value that would be used if the form were submitted right now).\nThis is a reactive method that will rerun whenever the current value of the requested field changes. Return value will be undefined if the field is not currently rendered."
+  },
+  "AutoForm.getFormCollection": {
+    "access": "public",
+    "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-autoform/client/autoform-api.js",
+    "kind": "function",
+    "lineno": 1052,
+    "longname": "AutoForm.getFormCollection",
+    "memberof": "AutoForm",
+    "name": "getFormCollection",
+    "params": [
+      {
+        "description": "<p>The form's <code>id</code> attribute</p>",
+        "name": "formId",
+        "type": {
+          "names": [
+            "String"
+          ]
+        }
+      }
+    ],
+    "returns": [
+      {
+        "description": "<p>The Collection instance</p>",
+        "type": {
+          "names": [
+            "Mongo.Collection",
+            "undefined"
+          ]
+        }
+      }
+    ],
+    "scope": "static",
+    "summary": "Gets the collection for a form from the `collection` attribute"
+  },
+  "AutoForm.getFormId": {
+    "access": "public",
+    "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-autoform/client/autoform-api.js",
+    "kind": "function",
+    "lineno": 1082,
+    "longname": "AutoForm.getFormId",
+    "memberof": "AutoForm",
+    "name": "getFormId",
+    "params": [],
+    "returns": [
+      {
+        "description": "<p>The containing form's <code>id</code> attribute value</p>",
+        "type": {
+          "names": [
+            "String"
+          ]
+        }
+      }
+    ],
+    "scope": "static",
+    "summary": "Call in a helper to get the containing form's `id` attribute. Reactive."
+  },
+  "AutoForm.getFormSchema": {
+    "access": "public",
+    "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-autoform/client/autoform-api.js",
+    "kind": "function",
+    "lineno": 1065,
+    "longname": "AutoForm.getFormSchema",
+    "memberof": "AutoForm",
+    "name": "getFormSchema",
+    "params": [
+      {
+        "description": "<p>The form's <code>id</code> attribute</p>",
+        "name": "formId",
+        "type": {
+          "names": [
+            "String"
+          ]
+        }
+      },
+      {
+        "description": "<p>Pass the form data context as an optimization or if the form is not yet rendered.</p>",
+        "name": "form",
+        "optional": true,
+        "type": {
+          "names": [
+            "Object"
+          ]
+        }
+      }
+    ],
+    "returns": [
+      {
+        "description": "<p>The SimpleSchema instance</p>",
+        "type": {
+          "names": [
+            "SimpleSchema",
+            "undefined"
+          ]
+        }
+      }
+    ],
+    "scope": "static",
+    "summary": "Gets the schema for a form, from the `schema` attribute if\nprovided, or from the schema attached to the `Mongo.Collection`\nspecified in the `collection` attribute. The form must be\ncurrently rendered."
+  },
+  "AutoForm.getFormValues": {
+    "access": "public",
+    "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-autoform/client/autoform-api.js",
+    "kind": "function",
+    "lineno": 244,
+    "longname": "AutoForm.getFormValues",
+    "memberof": "AutoForm",
+    "name": "getFormValues",
+    "params": [
+      {
+        "description": "<p>The <code>id</code> attribute of the <code>autoForm</code> you want current values for.</p>",
+        "name": "formId",
+        "type": {
+          "names": [
+            "String"
+          ]
+        }
+      },
+      {
+        "description": "<p>The template instance, if already known, as a performance optimization.</p>",
+        "name": "template",
+        "optional": true,
+        "type": {
+          "names": [
+            "Template"
+          ]
+        }
+      },
+      {
+        "description": "<p>The SimpleSchema instance, if already known, as a performance optimization.</p>",
+        "name": "ss",
+        "optional": true,
+        "type": {
+          "names": [
+            "SimpleSchema"
+          ]
+        }
+      },
+      {
+        "description": "<p>Set to <code>true</code> to return a modifier object or <code>false</code> to return a normal object. For backwards compatibility, and object containing both is returned if this is undefined.</p>",
+        "name": "getModifier",
+        "optional": true,
+        "type": {
+          "names": [
+            "Boolean"
+          ]
+        }
+      }
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Object",
+            "null"
+          ]
+        }
+      }
+    ],
+    "scope": "static",
+    "summary": "Returns an object representing the current values of all schema-based fields in the form.\nThe returned object is either a normal object or a MongoDB modifier, based on the `getModifier` argument. Return value may be `null` if the form is not currently rendered on screen."
+  },
+  "AutoForm.getInputType": {
+    "access": "public",
+    "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-autoform/client/autoform-api.js",
+    "kind": "function",
+    "lineno": 767,
+    "longname": "AutoForm.getInputType",
+    "memberof": "AutoForm",
+    "name": "getInputType",
+    "params": [
+      {
+        "description": "<p>The attributes provided to afFieldInput.</p>",
+        "name": "atts",
+        "type": {
+          "names": [
+            "Object"
+          ]
+        }
+      }
+    ],
+    "returns": [
+      {
+        "description": "<p>The input type. Most are the same as the <code>type</code> attributes for HTML input elements, but some are special strings that autoform interprets.</p>",
+        "type": {
+          "names": [
+            "String"
+          ]
+        }
+      }
+    ],
+    "scope": "static",
+    "summary": "Call this method from a UI helper to get the type string for the input control."
+  },
+  "AutoForm.getInputTypeTemplateNameForElement": {
+    "access": "public",
+    "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-autoform/client/autoform-api.js",
+    "kind": "function",
+    "lineno": 437,
+    "longname": "AutoForm.getInputTypeTemplateNameForElement",
+    "memberof": "AutoForm",
+    "name": "getInputTypeTemplateNameForElement",
+    "params": [
+      {
+        "description": "<p>The input DOM element, generated by an autoform input control</p>",
+        "name": "element",
+        "type": {
+          "names": [
+            "DOMElement"
+          ]
+        }
+      }
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "String"
+          ]
+        }
+      }
+    ],
+    "scope": "static",
+    "summary": "Returns the name of the template used to render the element."
+  },
+  "AutoForm.getInputValue": {
+    "access": "public",
+    "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-autoform/client/autoform-api.js",
+    "kind": "function",
+    "lineno": 463,
+    "longname": "AutoForm.getInputValue",
+    "memberof": "AutoForm",
+    "name": "getInputValue",
+    "params": [
+      {
+        "description": "<p>The input DOM element, generated by an autoform input control, which must have a <code>data-schema-key</code> attribute set to the correct schema key name.</p>",
+        "name": "element",
+        "type": {
+          "names": [
+            "DOMElement"
+          ]
+        }
+      },
+      {
+        "description": "<p>Provide the SimpleSchema instance if you already have it.</p>",
+        "name": "ss",
+        "optional": true,
+        "type": {
+          "names": [
+            "SimpleSchema"
+          ]
+        }
+      }
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Any"
+          ]
+        }
+      }
+    ],
+    "scope": "static",
+    "summary": "Returns the value of the field (the value that would be used if the form were submitted right now).\nUnlike `AutoForm.getFieldValue`, this function is not reactive."
+  },
+  "AutoForm.getLabelForField": {
+    "access": "public",
+    "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-autoform/client/autoform-api.js",
+    "kind": "function",
+    "lineno": 904,
+    "longname": "AutoForm.getLabelForField",
+    "memberof": "AutoForm",
+    "name": "getLabelForField",
+    "params": [
+      {
+        "description": "<p>The field name attribute / schema key.</p>",
+        "name": "name",
+        "type": {
+          "names": [
+            "String"
+          ]
+        }
+      }
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "Object"
+          ]
+        }
+      }
+    ],
+    "scope": "static",
+    "summary": "Call this method from a UI helper to get the field definitions based on the schema used by the closest containing autoForm."
+  },
+  "AutoForm.getTemplateName": {
+    "access": "public",
+    "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-autoform/client/autoform-api.js",
+    "kind": "function",
+    "lineno": 161,
+    "longname": "AutoForm.getTemplateName",
+    "memberof": "AutoForm",
+    "name": "getTemplateName",
+    "params": [
+      {
+        "name": "templateType",
+        "type": {
+          "names": [
+            "String"
+          ]
+        }
+      },
+      {
+        "name": "templateName",
+        "type": {
+          "names": [
+            "String"
+          ]
+        }
+      },
+      {
+        "name": "fieldName",
+        "optional": true,
+        "type": {
+          "names": [
+            "String"
+          ]
+        }
+      },
+      {
+        "description": "<p>Pass <code>true</code> to return a template name even if that template hasn't been defined.</p>",
+        "name": "skipExistsCheck",
+        "optional": true,
+        "type": {
+          "names": [
+            "Boolean"
+          ]
+        }
+      }
+    ],
+    "returns": [
+      {
+        "description": "<p>Template name</p>",
+        "type": {
+          "names": [
+            "String"
+          ]
+        }
+      }
+    ],
+    "scope": "static",
+    "summary": "Returns the full template name. In the simplest scenario, this is templateType_templateName\nas passed in. However, if templateName is not provided, it is looked up in the following\nmanner:\n\n1. autoform.<componentType>.template from the schema (field+type override for all forms)\n2. autoform.template from the schema (field override for all forms)\n3. template-<componentType> attribute on an ancestor component within the same form (form+type for all fields)\n4. template attribute on an ancestor component within the same form (form specificity for all types and fields)\n5. Default template for component type, as set by AutoForm.setDefaultTemplateForType\n6. Default template, as set by AutoForm.setDefaultTemplate.\n7. Built-in default template, currently bootstrap-3."
+  },
+  "AutoForm.getValidationContext": {
+    "access": "public",
+    "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-autoform/client/autoform-api.js",
+    "kind": "function",
+    "lineno": 644,
+    "longname": "AutoForm.getValidationContext",
+    "memberof": "AutoForm",
+    "name": "getValidationContext",
+    "params": [
+      {
+        "description": "<p>The <code>id</code> attribute of the <code>autoForm</code> for which you want the validation context</p>",
+        "name": "formId",
+        "type": {
+          "names": [
+            "String"
+          ]
+        }
+      }
+    ],
+    "returns": [
+      {
+        "description": "<p>The SimpleSchema validation context object.</p>",
+        "type": {
+          "names": [
+            "SimpleSchemaValidationContext"
+          ]
+        }
+      }
+    ],
+    "scope": "static",
+    "summary": "Use this method to get the validation context, which can be used to check\nthe current invalid fields, manually invalidate fields, etc."
+  },
+  "AutoForm.hooks": {
+    "access": "public",
+    "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-autoform/client/autoform-api.js",
+    "kind": "function",
+    "lineno": 43,
+    "longname": "AutoForm.hooks",
+    "memberof": "AutoForm",
+    "name": "hooks",
+    "params": [
+      {
+        "name": "hooks",
+        "type": {
+          "names": [
+            "Object"
+          ]
+        }
+      }
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "undefined"
+          ]
+        }
+      }
+    ],
+    "scope": "static",
+    "summary": "Defines hooks by form id. Extends hooks lists if called multiple times for the same\nform."
+  },
+  "AutoForm.parseData": {
+    "access": "public",
+    "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-autoform/client/autoform-api.js",
+    "kind": "function",
+    "lineno": 996,
+    "longname": "AutoForm.parseData",
+    "memberof": "AutoForm",
+    "name": "parseData",
+    "params": [
+      {
+        "description": "<p>Current data context for the form, or an empty object. Usually this is used from a quickForm, since the autoForm won't be rendered yet. Otherwise you should use AutoForm.getCurrentDataForForm if you can.</p>",
+        "name": "data",
+        "type": {
+          "names": [
+            "Object"
+          ]
+        }
+      }
+    ],
+    "returns": [
+      {
+        "description": "<p>Current data context for the form, or an empty object.</p>",
+        "type": {
+          "names": [
+            "Object"
+          ]
+        }
+      }
+    ],
+    "scope": "static",
+    "summary": "Parses and alters the current data context for a form. It will have default values added and a `_resolvedSchema` property that has the schema the form should use."
+  },
+  "AutoForm.selectFirstInvalidField": {
+    "access": "public",
+    "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-autoform/client/autoform-api.js",
+    "kind": "function",
+    "lineno": 1093,
+    "longname": "AutoForm.selectFirstInvalidField",
+    "memberof": "AutoForm",
+    "name": "selectFirstInvalidField",
+    "params": [
+      {
+        "description": "<p>The <code>id</code> attribute of the form</p>",
+        "name": "formId",
+        "type": {
+          "names": [
+            "String"
+          ]
+        }
+      },
+      {
+        "description": "<p>The SimpleSchema instance that was used to create the form's validation context.</p>",
+        "name": "ss",
+        "type": {
+          "names": [
+            "SimpleSchema"
+          ]
+        }
+      }
+    ],
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "undefined"
+          ]
+        }
+      }
+    ],
+    "scope": "static",
+    "summary": "Selects the focus the first field (in DOM order) with an error."
+  },
+  "AutoForm.templateInstanceForForm": {
+    "access": "public",
+    "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-autoform/client/autoform-api.js",
+    "kind": "function",
+    "lineno": 923,
+    "longname": "AutoForm.templateInstanceForForm",
+    "memberof": "AutoForm",
+    "name": "templateInstanceForForm",
+    "params": [
+      {
+        "description": "<p>The form's <code>id</code> attribute</p>",
+        "name": "formId",
+        "optional": true,
+        "type": {
+          "names": [
+            "String"
+          ]
+        }
+      }
+    ],
+    "returns": [
+      {
+        "description": "<p>The template instance.</p>",
+        "type": {
+          "names": [
+            "TemplateInstance",
+            "undefined"
+          ]
+        }
+      }
+    ],
+    "scope": "static",
+    "summary": "Gets the template instance for the form with formId or the closest form to the current context."
+  },
+  "AutoForm.validateField": {
+    "access": "public",
+    "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-autoform/client/autoform-api.js",
+    "kind": "function",
+    "lineno": 593,
+    "longname": "AutoForm.validateField",
+    "memberof": "AutoForm",
+    "name": "validateField",
+    "params": [
+      {
+        "description": "<p>The <code>id</code> attribute of the <code>autoForm</code> you want to validate.</p>",
+        "name": "formId",
+        "type": {
+          "names": [
+            "String"
+          ]
+        }
+      },
+      {
+        "description": "<p>The name of the field within the <code>autoForm</code> you want to validate.</p>",
+        "name": "fieldName",
+        "type": {
+          "names": [
+            "String"
+          ]
+        }
+      },
+      {
+        "defaultvalue": false,
+        "description": "<p>Set to <code>true</code> to skip validation if the field has no value. Useful for preventing <code>required</code> errors in form fields that the user has not yet filled out.</p>",
+        "name": "skipEmpty",
+        "optional": true,
+        "type": {
+          "names": [
+            "Boolean"
+          ]
+        }
+      }
+    ],
+    "returns": [
+      {
+        "description": "<p>Is it valid?</p>",
+        "type": {
+          "names": [
+            "Boolean"
+          ]
+        }
+      }
+    ],
+    "scope": "static",
+    "summary": "In addition to returning a boolean that indicates whether the field is currently valid,\nthis method causes the reactive validation messages to appear."
+  },
+  "AutoForm.validateForm": {
+    "access": "public",
+    "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-autoform/client/autoform-api.js",
+    "kind": "function",
+    "lineno": 608,
+    "longname": "AutoForm.validateForm",
+    "memberof": "AutoForm",
+    "name": "validateForm",
+    "params": [
+      {
+        "description": "<p>The <code>id</code> attribute of the <code>autoForm</code> you want to validate.</p>",
+        "name": "formId",
+        "type": {
+          "names": [
+            "String"
+          ]
+        }
+      }
+    ],
+    "returns": [
+      {
+        "description": "<p>Is it valid?</p>",
+        "type": {
+          "names": [
+            "Boolean"
+          ]
+        }
+      }
+    ],
+    "scope": "static",
+    "summary": "In addition to returning a boolean that indicates whether the form is currently valid,\nthis method causes the reactive validation messages to appear."
+  },
+  "AutoForm.viewForForm": {
+    "access": "public",
+    "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-autoform/client/autoform-api.js",
+    "kind": "function",
+    "lineno": 939,
+    "longname": "AutoForm.viewForForm",
+    "memberof": "AutoForm",
+    "name": "viewForForm",
+    "params": [
+      {
+        "description": "<p>The form's <code>id</code> attribute. Do not pass this if calling from within a form context.</p>",
+        "name": "formId",
+        "optional": true,
+        "type": {
+          "names": [
+            "String"
+          ]
+        }
+      }
+    ],
+    "returns": [
+      {
+        "description": "<p>The <code>Blaze.View</code> instance for the autoForm.</p>",
+        "type": {
+          "names": [
+            "Blaze.View",
+            "undefined"
+          ]
+        }
+      }
+    ],
+    "scope": "static",
+    "summary": "Gets the `Blaze.View` instance for the form with formId or the closest form to the current context."
+  },
   "Collaboration.addAdministrator": {
     "examples": [
       "```js\nvar collaboration = Collaborations.findOne({_id: \"ucsc\"});\ncollaboration.addAdministrator('janedoe@test.org');\n```"
@@ -613,6 +1671,405 @@ DocsData = {
     "summary": "Toggles a boolean session variable true/false.",
     "version": "1.2.3"
   },
+  "Roles.addUsersToRoles": {
+    "examples": [
+      "Roles.addUsersToRoles(userId, 'admin')\n    Roles.addUsersToRoles(userId, ['view-secrets'], 'example.com')\n    Roles.addUsersToRoles([user1, user2], ['user','editor'])\n    Roles.addUsersToRoles([user1, user2], ['glorious-admin', 'perform-action'], 'example.org')\n    Roles.addUsersToRoles(userId, 'admin', Roles.GLOBAL_GROUP)"
+    ],
+    "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-roles/roles/roles_common.js",
+    "kind": "function",
+    "lineno": 114,
+    "longname": "Roles.addUsersToRoles",
+    "memberof": "Roles",
+    "name": "addUsersToRoles",
+    "params": [
+      {
+        "description": "<p>User id(s) or object(s) with an _id field</p>",
+        "name": "users",
+        "type": {
+          "names": [
+            "Array",
+            "String"
+          ]
+        }
+      },
+      {
+        "description": "<p>Name(s) of roles/permissions to add users to</p>",
+        "name": "roles",
+        "type": {
+          "names": [
+            "Array",
+            "String"
+          ]
+        }
+      },
+      {
+        "description": "<p>Optional group name. If supplied, roles will be\n                        specific to that group.\n                        Group names can not start with a '$' or contain\n                        null characters.  Periods in names '.' are\n                        automatically converted to underscores.\n                        The special group Roles.GLOBAL_GROUP provides\n                        a convenient way to assign blanket roles/permissions\n                        across all groups.  The roles/permissions in the\n                        Roles.GLOBAL_GROUP group will be automatically\n                        included in checks for any group.</p>",
+        "name": "group",
+        "optional": true,
+        "type": {
+          "names": [
+            "String"
+          ]
+        }
+      }
+    ],
+    "scope": "static",
+    "summary": "Add users to roles. Will create roles as needed.\n\nNOTE: Mixing grouped and non-grouped roles for the same user\n      is not supported and will throw an error.\n\nMakes 2 calls to database:\n 1. retrieve list of all existing roles\n 2. update users' roles"
+  },
+  "Roles.createRole": {
+    "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-roles/roles/roles_common.js",
+    "kind": "function",
+    "lineno": 55,
+    "longname": "Roles.createRole",
+    "memberof": "Roles",
+    "name": "createRole",
+    "params": [
+      {
+        "description": "<p>Name of role</p>",
+        "name": "role",
+        "type": {
+          "names": [
+            "String"
+          ]
+        }
+      }
+    ],
+    "returns": [
+      {
+        "description": "<p>id of new role</p>",
+        "type": {
+          "names": [
+            "String"
+          ]
+        }
+      }
+    ],
+    "scope": "static",
+    "summary": "Create a new role. Whitespace will be trimmed."
+  },
+  "Roles.deleteRole": {
+    "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-roles/roles/roles_common.js",
+    "kind": "function",
+    "lineno": 89,
+    "longname": "Roles.deleteRole",
+    "memberof": "Roles",
+    "name": "deleteRole",
+    "params": [
+      {
+        "description": "<p>Name of role</p>",
+        "name": "role",
+        "type": {
+          "names": [
+            "String"
+          ]
+        }
+      }
+    ],
+    "scope": "static",
+    "summary": "Delete an existing role.  Will throw \"Role in use\" error if any users\nare currently assigned to the target role."
+  },
+  "Roles.getAllRoles": {
+    "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-roles/roles/roles_common.js",
+    "kind": "function",
+    "lineno": 415,
+    "longname": "Roles.getAllRoles",
+    "memberof": "Roles",
+    "name": "getAllRoles",
+    "params": [],
+    "returns": [
+      {
+        "description": "<p>cursor of existing roles</p>",
+        "type": {
+          "names": [
+            "Cursor"
+          ]
+        }
+      }
+    ],
+    "scope": "static",
+    "summary": "Retrieve set of all existing roles"
+  },
+  "Roles.getGroupsForUser": {
+    "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-roles/roles/roles_common.js",
+    "kind": "function",
+    "lineno": 494,
+    "longname": "Roles.getGroupsForUser",
+    "memberof": "Roles",
+    "name": "getGroupsForUser",
+    "params": [
+      {
+        "description": "<p>User Id or actual user object</p>",
+        "name": "user",
+        "type": {
+          "names": [
+            "String",
+            "Object"
+          ]
+        }
+      },
+      {
+        "description": "<p>Optional name of roles to restrict groups to.</p>",
+        "name": "role",
+        "optional": true,
+        "type": {
+          "names": [
+            "String"
+          ]
+        }
+      }
+    ],
+    "returns": [
+      {
+        "description": "<p>Array of user's groups, unsorted. Roles.GLOBAL_GROUP will be omitted</p>",
+        "type": {
+          "names": [
+            "Array"
+          ]
+        }
+      }
+    ],
+    "scope": "static",
+    "summary": "Retrieve users groups, if any"
+  },
+  "Roles.getRolesForUser": {
+    "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-roles/roles/roles_common.js",
+    "kind": "function",
+    "lineno": 372,
+    "longname": "Roles.getRolesForUser",
+    "memberof": "Roles",
+    "name": "getRolesForUser",
+    "params": [
+      {
+        "description": "<p>User Id or actual user object</p>",
+        "name": "user",
+        "type": {
+          "names": [
+            "String",
+            "Object"
+          ]
+        }
+      },
+      {
+        "description": "<p>Optional name of group to restrict roles to.\n                        User's Roles.GLOBAL_GROUP will also be included.</p>",
+        "name": "group",
+        "optional": true,
+        "type": {
+          "names": [
+            "String"
+          ]
+        }
+      }
+    ],
+    "returns": [
+      {
+        "description": "<p>Array of user's roles, unsorted.</p>",
+        "type": {
+          "names": [
+            "Array"
+          ]
+        }
+      }
+    ],
+    "scope": "static",
+    "summary": "Retrieve users roles"
+  },
+  "Roles.getUsersInRole": {
+    "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-roles/roles/roles_common.js",
+    "kind": "function",
+    "lineno": 426,
+    "longname": "Roles.getUsersInRole",
+    "memberof": "Roles",
+    "name": "getUsersInRole",
+    "params": [
+      {
+        "description": "<p>Name of role/permission.  If array, users\n                           returned will have at least one of the roles\n                           specified but need not have <em>all</em> roles.</p>",
+        "name": "role",
+        "type": {
+          "names": [
+            "Array",
+            "String"
+          ]
+        }
+      },
+      {
+        "description": "<p>Optional name of group to restrict roles to.\n                        User's Roles.GLOBAL_GROUP will also be checked.</p>",
+        "name": "group",
+        "optional": true,
+        "type": {
+          "names": [
+            "String"
+          ]
+        }
+      },
+      {
+        "description": "<p>Optional options which are passed directly\n                          through to <code>Meteor.users.find(query, options)</code></p>",
+        "name": "options",
+        "optional": true,
+        "type": {
+          "names": [
+            "Object"
+          ]
+        }
+      }
+    ],
+    "returns": [
+      {
+        "description": "<p>cursor of users in role</p>",
+        "type": {
+          "names": [
+            "Cursor"
+          ]
+        }
+      }
+    ],
+    "scope": "static",
+    "summary": "Retrieve all users who are in target role.\n\nNOTE: This is an expensive query; it performs a full collection scan\non the users collection since there is no index set on the 'roles' field.\nThis is by design as most queries will specify an _id so the _id index is\nused automatically."
+  },
+  "Roles.removeUsersFromRoles": {
+    "examples": [
+      "Roles.removeUsersFromRoles(users.bob, 'admin')\n    Roles.removeUsersFromRoles([users.bob, users.joe], ['editor'])\n    Roles.removeUsersFromRoles([users.bob, users.joe], ['editor', 'user'])\n    Roles.removeUsersFromRoles(users.eve, ['user'], 'group1')"
+    ],
+    "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-roles/roles/roles_common.js",
+    "kind": "function",
+    "lineno": 181,
+    "longname": "Roles.removeUsersFromRoles",
+    "memberof": "Roles",
+    "name": "removeUsersFromRoles",
+    "params": [
+      {
+        "description": "<p>User id(s) or object(s) with an _id field</p>",
+        "name": "users",
+        "type": {
+          "names": [
+            "Array",
+            "String"
+          ]
+        }
+      },
+      {
+        "description": "<p>Name(s) of roles to add users to</p>",
+        "name": "roles",
+        "type": {
+          "names": [
+            "Array",
+            "String"
+          ]
+        }
+      },
+      {
+        "description": "<p>Optional. Group name. If supplied, only that\n                        group will have roles removed.</p>",
+        "name": "group",
+        "optional": true,
+        "type": {
+          "names": [
+            "String"
+          ]
+        }
+      }
+    ],
+    "scope": "static",
+    "summary": "Remove users from roles"
+  },
+  "Roles.setUserRoles": {
+    "examples": [
+      "Roles.setUserRoles(userId, 'admin')\n    Roles.setUserRoles(userId, ['view-secrets'], 'example.com')\n    Roles.setUserRoles([user1, user2], ['user','editor'])\n    Roles.setUserRoles([user1, user2], ['glorious-admin', 'perform-action'], 'example.org')\n    Roles.setUserRoles(userId, 'admin', Roles.GLOBAL_GROUP)"
+    ],
+    "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-roles/roles/roles_common.js",
+    "kind": "function",
+    "lineno": 151,
+    "longname": "Roles.setUserRoles",
+    "memberof": "Roles",
+    "name": "setUserRoles",
+    "params": [
+      {
+        "description": "<p>User id(s) or object(s) with an _id field</p>",
+        "name": "users",
+        "type": {
+          "names": [
+            "Array",
+            "String"
+          ]
+        }
+      },
+      {
+        "description": "<p>Name(s) of roles/permissions to add users to</p>",
+        "name": "roles",
+        "type": {
+          "names": [
+            "Array",
+            "String"
+          ]
+        }
+      },
+      {
+        "description": "<p>Optional group name. If supplied, roles will be\n                        specific to that group.\n                        Group names can not start with '$'.\n                        Periods in names '.' are automatically converted\n                        to underscores.\n                        The special group Roles.GLOBAL_GROUP provides\n                        a convenient way to assign blanket roles/permissions\n                        across all groups.  The roles/permissions in the\n                        Roles.GLOBAL_GROUP group will be automatically\n                        included in checks for any group.</p>",
+        "name": "group",
+        "optional": true,
+        "type": {
+          "names": [
+            "String"
+          ]
+        }
+      }
+    ],
+    "scope": "static",
+    "summary": "Set a users roles/permissions."
+  },
+  "Roles.userIsInRole": {
+    "examples": [
+      "// non-group usage\n    Roles.userIsInRole(user, 'admin')\n    Roles.userIsInRole(user, ['admin','editor'])\n    Roles.userIsInRole(userId, 'admin')\n    Roles.userIsInRole(userId, ['admin','editor'])\n\n    // per-group usage\n    Roles.userIsInRole(user,   ['admin','editor'], 'group1')\n    Roles.userIsInRole(userId, ['admin','editor'], 'group1')\n    Roles.userIsInRole(userId, ['admin','editor'], Roles.GLOBAL_GROUP)\n\n    // this format can also be used as short-hand for Roles.GLOBAL_GROUP\n    Roles.userIsInRole(user, 'admin')"
+    ],
+    "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-roles/roles/roles_common.js",
+    "kind": "function",
+    "lineno": 259,
+    "longname": "Roles.userIsInRole",
+    "memberof": "Roles",
+    "name": "userIsInRole",
+    "params": [
+      {
+        "description": "<p>User Id or actual user object</p>",
+        "name": "user",
+        "type": {
+          "names": [
+            "String",
+            "Object"
+          ]
+        }
+      },
+      {
+        "description": "<p>Name of role/permission or Array of\n                           roles/permissions to check against.  If array,\n                           will return true if user is in <em>any</em> role.</p>",
+        "name": "roles",
+        "type": {
+          "names": [
+            "String",
+            "Array"
+          ]
+        }
+      },
+      {
+        "description": "<p>Optional. Name of group.  If supplied, limits check\n                        to just that group.\n                        The user's Roles.GLOBAL_GROUP will always be checked\n                        whether group is specified or not.</p>",
+        "name": "group",
+        "optional": true,
+        "type": {
+          "names": [
+            "String"
+          ]
+        }
+      }
+    ],
+    "returns": [
+      {
+        "description": "<p>true if user is in <em>any</em> of the target roles</p>",
+        "type": {
+          "names": [
+            "Boolean"
+          ]
+        }
+      }
+    ],
+    "scope": "static",
+    "summary": "Check if user has specified permissions/roles"
+  },
   "Router.go": {
     "examples": [
       "```js\nRouter.go('/path/to/page'});\nRouter.go('itemsShowRoute', {_id: 5}, {hash: 'frag', query: 'string});\n```"
@@ -803,7 +2260,7 @@ DocsData = {
     ],
     "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-user-model/lib/user-model.js",
     "kind": "member",
-    "lineno": 244,
+    "lineno": 272,
     "locus": "Server",
     "longname": "User./testGetCollaborations",
     "memberof": "User",
@@ -827,7 +2284,7 @@ DocsData = {
     ],
     "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-user-model/lib/user-model.js",
     "kind": "member",
-    "lineno": 189,
+    "lineno": 217,
     "longname": "User.defaultEmail",
     "memberof": "User",
     "name": "defaultEmail",
@@ -868,13 +2325,36 @@ DocsData = {
     "summary": "The personal name of the user account.",
     "version": "1.2.3"
   },
+  "User.fullName": {
+    "examples": [
+      "```js\nvar selectedUser = Meteor.users.findOne({username: \"janedoe\"});\nconsole.log(selectedUser.fullName());\n```"
+    ],
+    "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-user-model/lib/user-model.js",
+    "kind": "member",
+    "lineno": 197,
+    "longname": "User.fullName",
+    "memberof": "User",
+    "name": "fullName",
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "String"
+          ]
+        }
+      }
+    ],
+    "scope": "static",
+    "summary": "Gets the full name of the user.",
+    "version": "1.2.3"
+  },
   "User.getAllCollaborations": {
     "examples": [
       "```js\nvar selectedUser = Meteor.users.findOne({username: \"janedoe\"});\nselectedUser.getAllCollaborations().forEach(function(collaborationName){\n  console.log(collaborationName);\n});\n```"
     ],
     "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-user-model/lib/user-model.js",
     "kind": "member",
-    "lineno": 271,
+    "lineno": 299,
     "locus": "Server",
     "longname": "User.getAllCollaborations",
     "memberof": "User",
@@ -898,7 +2378,7 @@ DocsData = {
     ],
     "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-user-model/lib/user-model.js",
     "kind": "member",
-    "lineno": 132,
+    "lineno": 140,
     "longname": "User.getCollaborations",
     "memberof": "User",
     "name": "getCollaborations",
@@ -921,7 +2401,7 @@ DocsData = {
     ],
     "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-user-model/lib/user-model.js",
     "kind": "member",
-    "lineno": 83,
+    "lineno": 91,
     "longname": "User.hasNoCollaborations",
     "memberof": "User",
     "name": "hasNoCollaborations",
@@ -944,7 +2424,7 @@ DocsData = {
     ],
     "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-user-model/lib/user-model.js",
     "kind": "member",
-    "lineno": 59,
+    "lineno": 67,
     "longname": "User.isMemberOfAnyCollaboration",
     "memberof": "User",
     "name": "isMemberOfAnyCollaboration",
@@ -967,7 +2447,7 @@ DocsData = {
     ],
     "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-user-model/lib/user-model.js",
     "kind": "member",
-    "lineno": 105,
+    "lineno": 113,
     "longname": "User.isMemberOfCollaboration",
     "memberof": "User",
     "name": "isMemberOfCollaboration",
@@ -990,13 +2470,33 @@ DocsData = {
     "summary": "Determines if a user is associated with a specific collaboration.",
     "version": "1.2.3"
   },
+  "User.isSelf": {
+    "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-user-model/lib/user-model.js",
+    "kind": "member",
+    "lineno": 50,
+    "longname": "User.isSelf",
+    "memberof": "User",
+    "name": "isSelf",
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "String"
+          ]
+        }
+      }
+    ],
+    "scope": "static",
+    "summary": "Check if the this user is the current logged in user or the specified user.",
+    "version": "1.2.3"
+  },
   "User.syncCollaborations": {
     "examples": [
       "```js\nvar selectedUser = Meteor.users.findOne({username: \"janedoe\"});\nselectedUser.syncCollaborations();\n```"
     ],
     "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-user-model/lib/user-model.js",
     "kind": "member",
-    "lineno": 324,
+    "lineno": 352,
     "locus": "Anywhere",
     "longname": "User.syncCollaborations",
     "memberof": "User",
@@ -1004,5 +2504,52 @@ DocsData = {
     "scope": "static",
     "summary": "Makes sure the user account is synchronized with the current User model.  Basically a save() function for collaborations.",
     "version": "1.2.3"
+  },
+  "User.{{fullName}}": {
+    "examples": [
+      "```html\n<div>{{fullName}}</div>\n```"
+    ],
+    "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-user-model/client/template.helpers.js",
+    "kind": "member",
+    "lineno": 1,
+    "longname": "User.{{fullName}}",
+    "memberof": "User",
+    "name": "{{fullName}}",
+    "returns": [
+      {
+        "type": {
+          "names": [
+            "String"
+          ]
+        }
+      }
+    ],
+    "scope": "static",
+    "summary": "Gets the full name of the user.",
+    "version": "1.2.3"
+  },
+  "module:Roles.GLOBAL_GROUP": {
+    "examples": [
+      "Roles.addUsersToRoles(user, 'admin', Roles.GLOBAL_GROUP)\n    Roles.userIsInRole(user, 'admin') // => true\n\n    Roles.setUserRoles(user, 'support-staff', Roles.GLOBAL_GROUP)\n    Roles.userIsInRole(user, 'support-staff') // => true\n    Roles.userIsInRole(user, 'admin') // => false"
+    ],
+    "filepath": "https://github.com/username/myproject/tree/master/packages/clinical-roles/roles/roles_common.js",
+    "kind": "member",
+    "lineno": 52,
+    "longname": "module:Roles.GLOBAL_GROUP",
+    "memberof": "module:Roles",
+    "name": "GLOBAL_GROUP",
+    "properties": [
+      {
+        "name": "GLOBAL_GROUP"
+      }
+    ],
+    "readonly": true,
+    "scope": "static",
+    "summary": "Constant used to reference the special 'global' group that\ncan be used to apply blanket permissions across all groups.",
+    "type": {
+      "names": [
+        "String"
+      ]
+    }
   }
 };

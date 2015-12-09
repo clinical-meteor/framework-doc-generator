@@ -1,6 +1,6 @@
 {{#template name="preamble"}}
 
-# Meteor Project Docs
+# Cliincal Meteor Distro
 *****
 
 {{/template}}

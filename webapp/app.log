@@ -31,3 +31,19 @@ specify an alternative port with --port <port>.
 Running two copies of Meteor in the same application directory
 will not work. If something else is using port 3333, you can
 specify an alternative port with --port <port>.
+=> Client modified -- refreshing (x2)Can't listen on port 3333. Perhaps another Meteor is running?
+
+Running two copies of Meteor in the same application directory
+will not work. If something else is using port 3333, you can
+specify an alternative port with --port <port>.
+=> Client modified -- refreshing (x3)=> Client modified -- refreshing (x4)=> Client modified -- refreshing (x5)=> Client modified -- refreshing (x6)=> Client modified -- refreshing (x7)=> Client modified -- refreshing (x8)=> Client modified -- refreshing (x9)=> Client modified -- refreshing (x10)=> Client modified -- refreshing (x11)=> Client modified -- refreshing (x12)=> Client modified -- refreshing (x13)=> Client modified -- refreshing (x14)Can't listen on port 3333. Perhaps another Meteor is running?
+
+Running two copies of Meteor in the same application directory
+will not work. If something else is using port 3333, you can
+specify an alternative port with --port <port>.
+=> Client modified -- refreshing (x15)=> Client modified -- refreshing (x16)=> Client modified -- refreshing (x17)=> Client modified -- refreshing (x18)Can't listen on port 3333. Perhaps another Meteor is running?
+
+Running two copies of Meteor in the same application directory
+will not work. If something else is using port 3333, you can
+specify an alternative port with --port <port>.
+=> Client modified -- refreshing (x19)=> Client modified -- refreshing (x20)=> Client modified -- refreshing (x21)=> Client modified -- refreshing (x22)=> Client modified -- refreshing (x23)=> Client modified -- refreshing (x24)=> Client modified -- refreshing (x25)=> Client modified -- refreshing (x26)=> Client modified -- refreshing (x27)=> Client modified -- refreshing (x28)=> Client modified -- refreshing (x29)=> Client modified -- refreshing (x30)=> Client modified -- refreshing (x31)=> Client modified -- refreshing (x32)=> Client modified -- refreshing (x33)=> Client modified -- refreshing (x34)=> Client modified -- refreshing (x35)=> Client modified -- refreshing (x36)=> Client modified -- refreshing (x37)=> Client modified -- refreshing (x38)=> Client modified -- refreshing (x39)=> Client modified -- refreshing (x40)=> Client modified -- refreshing (x41)
