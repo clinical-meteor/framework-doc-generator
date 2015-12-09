@@ -6,7 +6,6 @@ Use this app to generate the API documentation for a framework or track.
 #### Installation
 ==============================
 
-
 ````bash
 npm install -g meteor-jsdoc
 
@@ -21,3 +20,13 @@ cd ../webapp
 meteor deploy release-docs.meteor.com
 
 ````
+
+#### Demo
+==============================
+
+[http://clinical-docs.meteor.com](http://clinical-docs.meteor.com)
+
+#### Licensing
+==============================
+
+MIT.  Use as you will.  
