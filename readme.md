@@ -1,6 +1,7 @@
 ## framework-doc-generator
 
 Use this app to generate the API documentation for a framework or track.  
+[http://clinical-docs.meteor.com](http://clinical-docs.meteor.com)
 
 
 ==============================
@@ -30,11 +31,6 @@ clinical-jsdoc start
 cd ../webapp
 meteor deploy release-docs.meteor.com
 ````
-
-==============================
-#### Demo
-
-[http://clinical-docs.meteor.com](http://clinical-docs.meteor.com)
 
 
 ==============================
