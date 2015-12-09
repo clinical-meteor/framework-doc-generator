@@ -183,12 +183,12 @@ Template.api_box_args.helpers({
   }
 });
 
-Template.api_box_eg.onRendered(function() {
-  hljs.configure({
-    tabReplace: "  ",
-    useBR: true,
-    languages: ["javascript", "css", "json", "coffeescript"]
-  });
-
-  this.$("code").each((i, block) => hljs.highlightBlock(block));
-});
+// Template.api_box_eg.onRendered(function() {
+//   hljs.configure({
+//     tabReplace: "  ",
+//     useBR: true,
+//     languages: ["javascript", "css", "json", "coffeescript"]
+//   });
+//
+//   this.$("code").each((i, block) => hljs.highlightBlock(block));
+// });
