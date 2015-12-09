@@ -1,0 +1,16 @@
+{
+  "debug": false,
+  "nodePath": "",
+  "docsPath": "../build",
+  "meteorPort": 3333,
+  "initMeteor": true,
+  "updateMeteor": true,
+  "preamble": true,
+  "projectRepo": "https://github.com/username/myproject/tree/master",
+  "docsConfig": {
+    "title": "Clinical Meteor Distro",
+    "metas": {
+      "description": "Documentation for the Clinical Meteor framework."
+    }
+  }
+}
