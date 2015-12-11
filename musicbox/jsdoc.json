@@ -6,7 +6,7 @@
   "initMeteor": true,
   "updateMeteor": true,
   "preamble": true,
-  "projectRepo": "https://github.com/username/myproject/tree/master",
+  "projectRepo": "https://github.com/clinical-meteor/",
   "docsConfig": {
     "title": "Clinical Meteor Distro",
     "metas": {
