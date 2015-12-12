@@ -1,8 +1,8 @@
 
-  language: 'node_js'
 
 node_js:
   - "4.1"
+  language: 'node_js'
 
 services:
   - mongodb
@@ -16,15 +16,15 @@ env:
     - DISPLAY=:99.0
     - CONFIG_PREFIX=`npm config get prefix`
   matrix:
-addons:
-  apt:
-    sources:
+#addons:
+  #apt:
+    #sources:
     #- ubuntu-toolchain-r-test
-    packages:
+    #packages:
     #- g++-4.8
 cache:
   directories:
-    # - ~/.meteor
+    - ~/.meteor
     #- node_modules
     #- ~/.meteor/local/build/programs/server/assets/packages
 
@@ -50,9 +50,9 @@ before_install:
   - "sleep 60"
 
  - "cd playerpiano"
- - "cd packages"
- - "starrynight fetch"
- - "cd .."
+ #- "cd packages"
+ #- "starrynight fetch"
+ #- "cd .."
 
   # - "~/.meteor/meteor &"
 
