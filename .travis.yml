@@ -1,5 +1,5 @@
-# this travis.yml file is for the leaderboard-nightwatch example, when run standalone
-language: node_js
+
+  language: 'node_js'
 
 node_js:
   - "4.1"
