@@ -24,7 +24,7 @@ addons:
     - g++-4.8
 cache:
   directories:
-    - ~/.meteor
+    # - ~/.meteor
     #- node_modules
     #- ~/.meteor/local/build/programs/server/assets/packages
 
@@ -47,7 +47,7 @@ before_install:
   - "curl https://install.meteor.com | /bin/sh"
 
   # give meteor a few seconds after installing
-  - "sleep 5"
+  - "sleep 60"
 
  - "cd playerpiano"
  - "cd packages"
