@@ -48,6 +48,6 @@ grove:less
 
 clinical:env
 clinical:router
+clinical:active-entry
 clinical:extended-api
 clinical:active-layout@0.3.8
-clinical:active-entry
