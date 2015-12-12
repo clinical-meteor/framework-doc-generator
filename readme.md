@@ -17,7 +17,8 @@ cd clinical-jsdoc
 npm install -g .  
 
 # fetch the latest packages we want to scrape documentation from
-cd ../factory
+# (a spoolbox in the player piano patter reads packages and copies data)
+cd ../spoolbox
 git submodule foreach git pull origin master
 
 # build the docs
@@ -27,10 +28,29 @@ clinical-jsdoc start
 
 # docs should now be available at http://localhost:3333
 
-## deploy the docs for a release
+## deploy/publish the docs for a release
 cd ../webapp
 meteor deploy release-docs.meteor.com
+
+## run tests on framework, and publish to continuous integration servers
+cd ../playerpiano
+# git submodule foreach git pull origin master
+starrynight fetch
+starrynight run-tests --framework gagarin --webdriver http://localhost:9515 ./packages/*/tests/gagarin/**/*.js
 ````
+
+====================================================
+#### Adding New Packages to the Releae Track
+
+```bash
+cd playerpiano/packages
+git submodule add http://github.com/clinical-meteor/my-new-package
+cd ..
+nano .meteor/repos
+  http://github.com/clinical-meteor/my-new-package
+starrynight fetch
+```
+
 
 
 ==============================

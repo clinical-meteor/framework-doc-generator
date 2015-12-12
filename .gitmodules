@@ -1,0 +1,54 @@
+[submodule "playerpiano/packages/clinical-env"]
+	path = playerpiano/packages/clinical-env
+	url = http://github.com/clinical-meteor/clinical-env
+[submodule "playerpiano/packages/clinical-active-entry"]
+	path = playerpiano/packages/clinical-active-entry
+	url = http://github.com/clinical-meteor/clinical-active-entry
+[submodule "playerpiano/packages/clinical-active-layout"]
+	path = playerpiano/packages/clinical-active-layout
+	url = http://github.com/clinical-meteor/clinical-active-layout
+[submodule "playerpiano/packages/clinical-user-model"]
+	path = playerpiano/packages/clinical-user-model
+	url = http://github.com/clinical-meteor/clinical-user-model
+[submodule "playerpiano/clinical-env"]
+	path = playerpiano/clinical-env
+	url = http://github.com/clinical-meteor/clinical-env
+[submodule "playerpiano/packages/clinical-autoform"]
+	path = playerpiano/packages/clinical-autoform
+	url = http://github.com/clinical-meteor/clinical-autoform
+[submodule "playerpiano/packages/clinical-active-record"]
+	path = playerpiano/packages/clinical-active-record
+	url = http://github.com/clinical-meteor/clinical-active-record
+[submodule "playerpiano/packages/clinical-collaborations"]
+	path = playerpiano/packages/clinical-collaborations
+	url = http://github.com/clinical-meteor/clinical-collaborations
+[submodule "playerpiano/packages/clinical-collaborations-ui"]
+	path = playerpiano/packages/clinical-collaborations-ui
+	url = http://github.com/clinical-meteor/clinical-collaborations-ui
+[submodule "playerpiano/packages/clinical-extended-api"]
+	path = playerpiano/packages/clinical-extended-api
+	url = http://github.com/clinical-meteor/clinical-extended-api
+[submodule "playerpiano/packages/clinical-form-builder"]
+	path = playerpiano/packages/clinical-form-builder
+	url = http://github.com/clinical-meteor/clinical-form-builder
+[submodule "playerpiano/packages/clinical-graphs-dailystats"]
+	path = playerpiano/packages/clinical-graphs-dailystats
+	url = http://github.com/clinical-meteor/clinical-graphs-dailystats
+[submodule "playerpiano/packages/clinical-hipaa-audit-log"]
+	path = playerpiano/packages/clinical-hipaa-audit-log
+	url = http://github.com/clinical-meteor/clinical-hipaa-audit-log
+[submodule "playerpiano/packages/clinical-keybindings"]
+	path = playerpiano/packages/clinical-keybindings
+	url = http://github.com/clinical-meteor/clinical-keybindings
+[submodule "playerpiano/packages/clinical-roles"]
+	path = playerpiano/packages/clinical-roles
+	url = http://github.com/clinical-meteor/clinical-roles
+[submodule "playerpiano/packages/clinical-router"]
+	path = playerpiano/packages/clinical-router
+	url = http://github.com/clinical-meteor/clinical-router
+[submodule "playerpiano/packages/clinical-router-url"]
+	path = playerpiano/packages/clinical-router-url
+	url = http://github.com/clinical-meteor/clinical-router-url
+[submodule "playerpiano/packages/clinical-schema-hydrator"]
+	path = playerpiano/packages/clinical-schema-hydrator
+	url = http://github.com/clinical-meteor/clinical-schema-hydrator
