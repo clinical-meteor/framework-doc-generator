@@ -1,8 +1,7 @@
-
-  language: 'node_js'
+language: node_js
 
 node_js:
-  - "4.2"
+  - "4.1"
 
 services:
   - mongodb
@@ -15,23 +14,12 @@ env:
     - TRAVIS=true
     - DISPLAY=:99.0
     - CONFIG_PREFIX=`npm config get prefix`
-  matrix:
-#addons:
-  #apt:
-    #sources:
-    #- ubuntu-toolchain-r-test
-    #packages:
-    #- g++-4.8
+
 cache:
   directories:
     - ~/.meteor
-    #- node_modules
-    #- ~/.meteor/local/build/programs/server/assets/packages
 
 before_install:
-  # - set CONFIG_PREFIX=`npm config get prefix`
-
-  # set up the node_modules dir, so we know where it is
   - "mkdir -p node_modules &"
 
   # install starrynight, so we can launch nightwatch and selenium
@@ -50,16 +38,5 @@ before_install:
   - "sleep 60"
 
  - "cd playerpiano"
- #- "cd packages"
- #- "starrynight fetch"
- #- "cd .."
 
-  # - "~/.meteor/meteor &"
-
-  # give Meteor some time to download packages, init data, and to start
-  # - "sleep 60"
-
-
-
-# we're not installing starrynight globally, so we run the script from the local node_modules folder
 script: "starrynight run-tests --framework gagarin --webdriver http://localhost:9515 ./packages/*/tests/gagarin/**/*.js"
