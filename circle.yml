@@ -5,19 +5,20 @@ machine:
   timezone:
     America/Los_Angeles # Set the timezone
 
-  # Override /etc/hosts
-  # hosts:
-  #  circlehost: 127.0.0.1
-  #  dev.mycompany.com: 127.0.0.1
-
   # Add some environment variables
   environment:
     CIRCLE_ENV: test
     CXX: g++-4.8
     TRAVIS: true
     DISPLAY: :99.0
-    CONFIG_PREFIX: `npm config get prefix`
+    #CONFIG_PREFIX: `npm config get prefix`
     #DATABASE_URL: postgres://ubuntu:@127.0.0.1:5432/circle_test
+
+  # Override /etc/hosts
+  # hosts:
+  #  circlehost: 127.0.0.1
+  #  dev.mycompany.com: 127.0.0.1
+
 
 ## Customize checkout
 checkout:
@@ -36,8 +37,8 @@ dependencies:
   # we automatically cache and restore many dependencies between
   # builds. If you need to, you can add custom paths to cache:
   cache_directories:
-    - "~/.meteor" # relative to the user's home directory
-    - "/usr/local/bin"
+    #- "~/.meteor" # relative to the user's home directory
+    #- "/usr/local/bin"
 
 ### Customize database setup
 #database:
@@ -52,11 +53,11 @@ test:
     - starrynight run-tests --framework gagarin
 
 ## Customize deployment commands
-deployment:
-  production:
-    branch: master
-    commands:
-      - printf "<Meteor username>\n<Meteor password>\n" | meteor deploy circlecivelocity.meteor.com
+#deployment:
+#  production:
+#    branch: master
+#    commands:
+#      - printf "<Meteor username>\n<Meteor password>\n" | meteor deploy circlecivelocity.meteor.com
 
 ## Custom notifications
 #notify:

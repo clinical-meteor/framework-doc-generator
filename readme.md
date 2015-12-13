@@ -40,7 +40,7 @@ starrynight run-tests --framework gagarin --webdriver http://localhost:9515 ./pa
 ````
 
 ====================================================
-#### Adding New Packages to the Releae Track
+#### Adding New Packages to the Release Track
 
 ```bash
 cd playerpiano/packages
@@ -52,6 +52,10 @@ starrynight fetch
 ```
 
 
+=====================================
+#### Continuous Integration Status
+
+https://circleci.com/gh/clinical-meteor/framework-doc-generator
 
 ==============================
 #### Licensing
