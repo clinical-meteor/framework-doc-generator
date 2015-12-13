@@ -9,36 +9,23 @@ machine:
   environment:
     CIRCLE_ENV: test
     CXX: g++-4.8
-    TRAVIS: true
     DISPLAY: :99.0
-    #CONFIG_PREFIX: `npm config get prefix`
-    #DATABASE_URL: postgres://ubuntu:@127.0.0.1:5432/circle_test
-
-  # Override /etc/hosts
-  # hosts:
-  #  circlehost: 127.0.0.1
-  #  dev.mycompany.com: 127.0.0.1
 
 
 ## Customize checkout
 checkout:
-  post:
-    - git submodule sync
-    - git submodule update --init --recursive # use submodules
+ post:
+   - git submodule sync
+   - git submodule update --init --recursive # use submodules
 
 ## Customize dependencies
 dependencies:
-  override:
-    - npm install starrynight
-       #- meteor || curl https://install.meteor.com | /bin/sh
-  pre:
-    - curl https://install.meteor.com | /bin/sh
-
-  # we automatically cache and restore many dependencies between
-  # builds. If you need to, you can add custom paths to cache:
   cache_directories:
-    #- "~/.meteor" # relative to the user's home directory
+    - "~/.meteor" # relative to the user's home directory
     #- "/usr/local/bin"
+  override:
+    - meteor || curl https://install.meteor.com | /bin/sh
+    - npm install starrynight -g
 
 ### Customize database setup
 #database:
@@ -50,7 +37,10 @@ dependencies:
 ## Customize test commands
 test:
   override:
-    - starrynight run-tests --framework gagarin
+    - cd playerpiano && starrynight fetch
+    - pwd
+    #- starrynight run-tests --framework gagarin
+    - cd playerpiano && starrynight run-tests --framework gagarin --webdriver http://localhost:9515 --path /packages/*/tests/gagarin/**/*.js
 
 ## Customize deployment commands
 #deployment:

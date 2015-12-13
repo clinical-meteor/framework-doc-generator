@@ -20,6 +20,9 @@ npm install -g .
 # (a spoolbox in the player piano patter reads packages and copies data)
 cd ../spoolbox
 git submodule foreach git pull origin master
+git submodule sync
+git submodule update --init --recursive # use submodules
+
 
 # build the docs
 clinical-jsdoc init
@@ -36,7 +39,7 @@ meteor deploy release-docs.meteor.com
 cd ../playerpiano
 # git submodule foreach git pull origin master
 starrynight fetch
-starrynight run-tests --framework gagarin --webdriver http://localhost:9515 ./packages/*/tests/gagarin/**/*.js
+starrynight run-tests --framework gagarin --webdriver http://localhost:9515 --path /packages/*/tests/gagarin/**/*.js
 ````
 
 ====================================================
