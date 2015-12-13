@@ -11,7 +11,7 @@ machine:
     CXX: g++-4.8
     TRAVIS: true
     DISPLAY: :99.0
-    CONFIG_PREFIX: `npm config get prefix`
+    #CONFIG_PREFIX: `npm config get prefix`
     #DATABASE_URL: postgres://ubuntu:@127.0.0.1:5432/circle_test
 
   # Override /etc/hosts
