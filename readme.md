@@ -39,7 +39,7 @@ meteor deploy release-docs.meteor.com
 cd ../playerpiano
 # git submodule foreach git pull origin master
 starrynight fetch
-starrynight run-tests --framework gagarin --webdriver http://localhost:9515 ./packages/*/tests/gagarin/**/*.js
+starrynight run-tests --framework gagarin --webdriver http://localhost:9515 --path /packages/*/tests/gagarin/**/*.js
 ````
 
 ====================================================
