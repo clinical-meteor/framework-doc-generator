@@ -37,10 +37,9 @@ dependencies:
 ## Customize test commands
 test:
   override:
-    - cd playerpiano
     - pwd
     #- starrynight run-tests --framework gagarin
-    - starrynight run-tests --framework gagarin --webdriver http://localhost:9515 ./packages/*/tests/gagarin/**/*.js
+    - cd playerpiano && starrynight run-tests --framework gagarin --webdriver http://localhost:9515 ./packages/*/tests/gagarin/**/*.js
 
 ## Customize deployment commands
 #deployment:
