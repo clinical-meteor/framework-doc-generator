@@ -25,7 +25,7 @@ dependencies:
     #- "/usr/local/bin"
   override:
     - meteor || curl https://install.meteor.com | /bin/sh
-    - npm install starrynight
+    - npm install starrynight -g
 
 ### Customize database setup
 #database:
