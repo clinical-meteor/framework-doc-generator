@@ -20,6 +20,9 @@ npm install -g .
 # (a spoolbox in the player piano patter reads packages and copies data)
 cd ../spoolbox
 git submodule foreach git pull origin master
+git submodule sync
+git submodule update --init --recursive # use submodules
+
 
 # build the docs
 clinical-jsdoc init

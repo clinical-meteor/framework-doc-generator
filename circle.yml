@@ -13,10 +13,10 @@ machine:
 
 
 ## Customize checkout
-#checkout:
-#  post:
-#    - git submodule sync
-#    - git submodule update --init --recursive # use submodules
+checkout:
+ post:
+   - git submodule sync
+   - git submodule update --init --recursive # use submodules
 
 ## Customize dependencies
 dependencies:
@@ -38,7 +38,9 @@ dependencies:
 test:
   override:
     - cd playerpiano
-    - starrynight run-tests --framework gagarin
+    - pwd
+    #- starrynight run-tests --framework gagarin
+    - starrynight run-tests --framework gagarin --webdriver http://localhost:9515 ./packages/*/tests/gagarin/**/*.js
 
 ## Customize deployment commands
 #deployment:
