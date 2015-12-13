@@ -1,18 +1,14 @@
 ## Customize the test machine
 machine:
 
+  # Timezone
   timezone:
     America/Los_Angeles # Set the timezone
 
-  node:
-      version: 0.10.33
-    pre:
-      - curl https://install.meteor.com | /bin/sh
-
   # Override /etc/hosts
-  hosts:
-    circlehost: 127.0.0.1
-    dev.mycompany.com: 127.0.0.1
+  # hosts:
+  #  circlehost: 127.0.0.1
+  #  dev.mycompany.com: 127.0.0.1
 
   # Add some environment variables
   environment:
@@ -34,6 +30,8 @@ dependencies:
   override:
     - npm install starrynight
        #- meteor || curl https://install.meteor.com | /bin/sh
+  pre:
+    - curl https://install.meteor.com | /bin/sh
 
   # we automatically cache and restore many dependencies between
   # builds. If you need to, you can add custom paths to cache:
