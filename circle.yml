@@ -50,11 +50,6 @@ dependencies:
 test:
   override:
     - starrynight run-tests --framework gagarin
-  post:
-    - bundle exec rake jasmine:ci: # add an extra test type
-        environment:
-          RAILS_ENV: test
-          RACK_ENV: test
 
 ## Customize deployment commands
 deployment:
