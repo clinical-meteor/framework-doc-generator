@@ -36,7 +36,7 @@ dependencies:
 
 ## Customize test commands
 test:
-  pre
+  pre:
     - cd playerpiano
   override:
     - starrynight run-tests --framework gagarin
