@@ -63,4 +63,4 @@ https://circleci.com/gh/clinical-meteor/framework-doc-generator/tree/master
 ==============================
 #### Licensing
 
-MIT.  Use as you will.  
+MIT.  Use as you will.    
