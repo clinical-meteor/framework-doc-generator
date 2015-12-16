@@ -40,7 +40,8 @@ test:
     - cd playerpiano && starrynight fetch
     - pwd
     #- starrynight run-tests --framework gagarin
-    - cd playerpiano && starrynight run-tests --framework gagarin --webdriver http://localhost:9515 --path /packages/*/tests/gagarin/**/*.js
+    #- cd playerpiano && starrynight run-tests --framework gagarin --webdriver http://localhost:9515 --path /packages/*/tests/gagarin/**/*.js
+    - starrynight run-tests --framework gagarin --webdriver http://localhost:9515 --path /packages/*/tests/gagarin/**/*.js
 
 ## Customize deployment commands
 #deployment:
