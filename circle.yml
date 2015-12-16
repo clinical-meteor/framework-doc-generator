@@ -43,6 +43,7 @@ general:
 test:
   override:
     - pwd
+    - meteor list
     - starrynight fetch
     - starrynight run-tests --framework gagarin --webdriver http://localhost:9515 --path /packages/*/tests/gagarin/**/*.js
 
