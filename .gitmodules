@@ -52,3 +52,6 @@
 [submodule "playerpiano/packages/clinical-schema-hydrator"]
 	path = playerpiano/packages/clinical-schema-hydrator
 	url = http://github.com/clinical-meteor/clinical-schema-hydrator
+[submodule "playerpiano/packages/clinical-glass-ui"]
+	path = playerpiano/packages/clinical-glass-ui
+	url = http://github.com/clinical-meteor/clinical-glass-ui
