@@ -55,6 +55,3 @@
 [submodule "playerpiano/packages/clinical-glass-ui"]
 	path = playerpiano/packages/clinical-glass-ui
 	url = http://github.com/clinical-meteor/clinical-glass-ui
-[submodule "playerpiano/packages/clinical-graphs-dailystats"]
-	path = playerpiano/packages/clinical-graphs-dailystats
-	url = http://github.com/clinical-meteor/clinical-graphs-dailystats
