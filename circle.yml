@@ -27,6 +27,10 @@ dependencies:
     - meteor || curl https://install.meteor.com | /bin/sh
     - npm install starrynight -g
 
+
+general:
+  build_dir: playerpiano
+
 ### Customize database setup
 #database:
 #  override:
@@ -36,11 +40,9 @@ dependencies:
 
 ## Customize test commands
 test:
-  pre:
-    - cd playerpiano
   override:
-    - starrynight fetch
     - pwd
+    - starrynight fetch
     - starrynight run-tests --framework gagarin --webdriver http://localhost:9515 --path /packages/*/tests/gagarin/**/*.js
 
 ## Customize deployment commands
