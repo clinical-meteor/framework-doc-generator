@@ -33,7 +33,7 @@ insecure                # Allow all DB writes from clients (for prototyping)
 accounts-base
 accounts-password
 
-photonic:glass-ui
+clinical:glass-ui
 anti:gagarin@=0.4.11
 
 # other packages used by clinical framework which need to be cleaned up
@@ -50,5 +50,14 @@ clinical:env
 clinical:router
 clinical:active-entry
 clinical:extended-api
-clinical:active-layout@0.3.8
+clinical:active-layout
 clinical:collaborations
+
+clinical:form-builder
+clinical:roles
+clinical:schema-hydrator
+clinical:hipaa-audit-log
+clinical:user-model
+clinical:active-record
+clinical:autoform
+clinical:graphs-dailystats
