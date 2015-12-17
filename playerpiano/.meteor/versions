@@ -26,7 +26,6 @@ clinical:env@3.2.0
 clinical:extended-api@2.2.0
 clinical:form-builder@0.1.0
 clinical:glass-ui@1.3.1
-clinical:graphs-dailystats@2.4.3
 clinical:hipaa-audit-log@2.3.7
 clinical:keybindings@1.2.1
 clinical:modals@1.0.6
@@ -38,7 +37,6 @@ clinical:router-url@2.0.15
 clinical:schema-hydrator@0.1.0
 clinical:user-model@1.4.0
 coffeescript@1.0.6
-d3js:d3@3.5.8
 ddp@1.1.0
 deps@1.0.7
 ejson@1.0.6
@@ -75,7 +73,6 @@ mongo-livedata@1.0.8
 mousetrap:mousetrap@1.4.6_1
 mrt:moment@2.8.1
 npm-bcrypt@0.7.8_2
-nvd3:nvd3@1.7.1
 observe-sequence@1.0.6
 ordered-dict@1.0.3
 random@1.0.3

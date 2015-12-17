@@ -11,3 +11,6 @@ if (Meteor.isServer){
     Env.allow({});
   });
 }
+
+
+Studies = new Mongo.Collection('studies');
