@@ -27,8 +27,8 @@ tracker                 # Meteor's client-side reactive programming library
 
 
 # (in)security packages we should remove at some point
-autopublish             # Publish all data to the clients (for prototyping)
-insecure                # Allow all DB writes from clients (for prototyping)
+#autopublish             # Publish all data to the clients (for prototyping)
+#insecure                # Allow all DB writes from clients (for prototyping)
 
 accounts-base
 accounts-password
@@ -57,8 +57,8 @@ clinical:form-builder
 clinical:roles
 clinical:schema-hydrator
 clinical:hipaa-audit-log
-clinical:user-model
 clinical:active-record
 clinical:autoform
 
+clinical:user-model@1.4.1
 #clinical:graphs-dailystats@2.4.4

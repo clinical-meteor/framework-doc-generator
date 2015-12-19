@@ -19,7 +19,7 @@ Meteor.methods({
         "description": "Nifty Neuroblastoma Study",
         "public": false,
         "citation": "unpublished",
-        "collaborations": [],
+        "collaborations": ["ckcc"],
         "tables": [],
         "Questionnaires": [
           "Patient_Enrollment_form",
@@ -38,7 +38,7 @@ Meteor.methods({
         "description": "Lazy Lymphoma Study",
         "public": false,
         "citation": "unpublished",
-        "collaborations": [],
+        "collaborations": ["ucsf"],
         "tables": [],
         "Questionnaires": [
           "Demographics",
@@ -56,7 +56,7 @@ Meteor.methods({
         "description": "Grumpy Granuloma Study",
         "public": false,
         "citation": "unpublished",
-        "collaborations": [],
+        "collaborations": ["ucsf"],
         "tables": [],
         "Questionnaires": [
           "Patient_Enrollment_form",
@@ -77,7 +77,7 @@ Meteor.methods({
         "description": "Cranky Carcinoma Study",
         "public": false,
         "citation": "unpublished",
-        "collaborations": [],
+        "collaborations": ["genomics"],
         "tables": [],
         "Questionnaires": [
           "RNASeq_completion_form",
@@ -95,7 +95,7 @@ Meteor.methods({
         "description": "Meloncholy Melanoma Study",
         "public": false,
         "citation": "unpublished",
-        "collaborations": [],
+        "collaborations": ["ucla"],
         "tables": [],
         "Questionnaires": [
           "RNASeq_completion_form",
@@ -113,7 +113,7 @@ Meteor.methods({
         "description": "Sappy Sarcoma Study",
         "public": false,
         "citation": "unpublished",
-        "collaborations": [],
+        "collaborations": ["ucsc"],
         "tables": [],
         "Questionnaires": [
           "Laser_Capture_Microdissection",
@@ -132,7 +132,7 @@ Meteor.methods({
         "description": "Patient Satisfaction Study",
         "public": false,
         "citation": "unpublished",
-        "collaborations": [],
+        "collaborations": ["wcdt"],
         "tables": [],
         "Questionnaires": [
           "Patient_Satisfaction"

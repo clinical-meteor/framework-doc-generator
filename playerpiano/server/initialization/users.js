@@ -82,7 +82,8 @@ Meteor.methods({
       profile: {
         fullName: 'Lisa Cuddy',
         role: 'Physician',
-        avatar: '/packages/clinical_accounts-housemd/housemd/lisa.cuddy.jpg'
+        avatar: '/packages/clinical_accounts-housemd/housemd/lisa.cuddy.jpg',
+        collaborations: ['wcdt']
       }
     });
     console.info('Account created: ' + userId);

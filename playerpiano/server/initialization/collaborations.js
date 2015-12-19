@@ -6,7 +6,7 @@ Meteor.methods({
     }, {$set:{
       isUnlisted: false,
       name: "California Kids Cancer Comparison",
-      description: faker.company.catchPhrase(),
+      description: "",
       collaborators: ["thirteen@test.org", "kutner@test.org"],
       administrators: ["thirteen@test.org"],
       invitations: [],
@@ -19,7 +19,7 @@ Meteor.methods({
     }, {$set:{
       isUnlisted: false,
       name: "West Coast Dream Team",
-      description: faker.company.catchPhrase(),
+      description: "",
       collaborators: ["cuddy@test.org"],
       administrators: ["cuddy@test.org"],
       invitations: [],
@@ -31,7 +31,7 @@ Meteor.methods({
     }, {$set:{
       isUnlisted: false,
       name: "UC Santa Cruz",
-      description: faker.company.catchPhrase(),
+      description: "",
       collaborators: ["foreman@test.org", "wcdt"],
       administrators: ["foreman@test.org"],
       invitations: [],
@@ -43,7 +43,7 @@ Meteor.methods({
     }, {$set:{
       isUnlisted: false,
       name: "Cancer Genomics",
-      description: faker.company.catchPhrase(),
+      description: "",
       collaborators: ["kutner@test.org", "chase@test.org", "ucsc"],
       administrators: ["kutner@test.org"],
       invitations: [],
@@ -55,7 +55,7 @@ Meteor.methods({
     }, {$set:{
       isUnlisted: false,
       name: "UC San Francisco",
-      description: faker.company.catchPhrase(),
+      description: "",
       collaborators: ["camron@test.org", "house@test.org", "wcdt"],
       administrators: ["house@test.org"],
       invitations: [],
@@ -67,7 +67,7 @@ Meteor.methods({
     }, {$set:{
       isUnlisted: false,
       name: "UC Los Angeles Francisco",
-      description: faker.company.catchPhrase(),
+      description: "",
       collaborators: ["wilson@test.org", "wcdt"],
       administrators: ["wilson@test.org"],
       invitations: [],
@@ -75,28 +75,6 @@ Meteor.methods({
       requiresAdministratorApprovalToJoin: false
     }});
 
-  },
-  initializeRandomCollaborations: function (){
-    console.log('Initializing database....');
-
-    var collaborationId = "";
-    var collaborationName = "";
-
-    for (var i = 0; i < 10; i++) {
-      collaborationName = faker.company.bsBuzz() + " " + faker.company.bsNoun();
-      collaborationId = Collaborations.insert({
-        isUnlisted: Random.choice([true, false]),
-        name: collaborationName,
-        description: faker.company.catchPhrase(),
-        collaborators: ["awatson1978@gmail.com", faker.internet.email()],
-        administrators: ["awatson1978@gmail.com", faker.internet.email()],
-        invitations: [],
-        requests: [],
-        requiresAdministratorApprovalToJoin: Random.choice([true, false]),
-      });
-
-      console.log(collaborationId + " " + collaborationName);
-    }
   },
   dropCollaborations: function (){
     Collaborations.remove({});
