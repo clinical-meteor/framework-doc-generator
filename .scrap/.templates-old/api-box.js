@@ -77,16 +77,6 @@ let typeNames = nameList => {
   return toOrSentence(nameList);
 };
 
-Template.apiBoxTitle.helpers({
-  nameContainsBraces: function(){
-    if (this.longname.indexOf('{') > -1) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-});
-
 Template.autoApiBox.helpers({
   apiData: apiData,
   signature() {
@@ -183,12 +173,12 @@ Template.api_box_args.helpers({
   }
 });
 
-// Template.api_box_eg.onRendered(function() {
-//   hljs.configure({
-//     tabReplace: "  ",
-//     useBR: true,
-//     languages: ["javascript", "css", "json", "coffeescript"]
-//   });
-//
-//   this.$("code").each((i, block) => hljs.highlightBlock(block));
-// });
+Template.api_box_eg.onRendered(function() {
+  hljs.configure({
+    tabReplace: "  ",
+    useBR: true,
+    languages: ["javascript", "css", "json", "coffeescript"]
+  });
+
+  this.$("code").each((i, block) => hljs.highlightBlock(block));
+});

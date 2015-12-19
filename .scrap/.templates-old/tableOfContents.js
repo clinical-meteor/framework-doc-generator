@@ -15,13 +15,6 @@ Template.nav.events({
 });
 
 Template.nav.helpers({
-  getName() {
-    if (this.name.indexOf('{') > -1) {
-      return this.name.substring(this.name.indexOf('{'), this.name.length);
-    } else {
-      return this.name;
-    }
-  },
   current() {
     return Session.get("urlHash") === this.id ? "current" : "";
   },
