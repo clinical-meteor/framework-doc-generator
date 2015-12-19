@@ -58,5 +58,4 @@ clinical:active-record
 clinical:autoform
 
 clinical:user-model
-
 #clinical:graphs-dailystats@2.4.4
