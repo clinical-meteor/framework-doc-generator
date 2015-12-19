@@ -13,21 +13,21 @@ Use this app to generate the API documentation for a framework or track.
 git clone http://github.com/clinical-meteor/framework-doc-generator release-docs
 
 # install the clinical-jsdoc
-cd clinical-jsdoc
-npm install -g .  
+cd meteor-jsdoc
+npm install -g .     # may need sudo
 
 # fetch the latest packages we want to scrape documentation from
 # (a spoolbox in the player piano patter reads packages and copies data)
-cd ../spoolbox
+cd ../playerpiano
 git submodule foreach git pull origin master
 git submodule sync
 git submodule update --init --recursive # use submodules
 
 
 # build the docs
-clinical-jsdoc init
-clinical-jsdoc build
-clinical-jsdoc start
+meteor-jsdoc init
+meteor-jsdoc build
+meteor-jsdoc start
 
 # docs should now be available at http://localhost:3333
 
@@ -36,8 +36,6 @@ cd ../webapp
 meteor deploy release-docs.meteor.com
 
 ## run tests on framework, and publish to continuous integration servers
-cd ../playerpiano
-# git submodule foreach git pull origin master
 starrynight fetch
 starrynight run-tests --framework gagarin --webdriver http://localhost:9515 --path /packages/*/tests/gagarin/**/*.js
 ````

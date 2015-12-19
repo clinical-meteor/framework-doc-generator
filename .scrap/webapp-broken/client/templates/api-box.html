@@ -1,14 +1,19 @@
 <template name="apiBoxTitle">
   <h3 id="{{id}}" class="api-title">
-    <a class="name selflink" href="#{{id}}" name="{{id}}">{{{name}}}</a>
+    {{#if nameContainsBraces }}
+      <a class="name selflink" href="#{{id}}" name="{{id}}">{{name}}</a>
+    {{else}}
+      <a class="name selflink" href="#{{id}}" name="{{id}}">{{longname}}</a>
+    {{/if}}
+
     {{#if locus}}
       <span class="locus">{{locus}}</span>
     {{/if}}
-    {{#if filepath}}
+    <!-- {{#if filepath}}
       <a class="src-code" href="{{filepath}}#L{{lineno}}" target="_blank">
         {{filepath}}, line {{lineno}}
       </a>
-    {{/if}}
+    {{/if}} -->
   </h3>
 </template>
 
@@ -18,7 +23,14 @@
     {{#markdown}}{{before}}{{/markdown}}
 
     <div class="api new-api-box">
-      {{> apiBoxTitle name=signature locus=locus id=id filepath=filepath lineno=lineno}}
+      {{> apiBoxTitle
+        name=name
+        longname=longname
+        locus=locus
+        id=id
+        filepath=filepath
+        lineno=lineno
+      }}
 
       <div class="desc">
         {{#if typeNames}}
@@ -60,7 +72,9 @@
         <h4>Example</h4>
       {{/if}}
       {{#each examples}}
-        {{> api_box_eg}}
+        {{#markdown}}
+{{{this}}}
+        {{/markdown}}
       {{/each}}
     </div>
 
@@ -79,10 +93,4 @@
     </span>
   </dt>
   <dd>{{#markdown}}{{{description}}}{{/markdown}}</dd>
-</template>
-
-<template name="api_box_eg">
-{{#markdown}}
-{{{this}}}
-{{/markdown}}
 </template>

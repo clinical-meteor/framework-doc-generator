@@ -1,0 +1,21 @@
+[[[[[ ~/Code/ClinicalFramework/framework-doc-generator/webapp ]]]]]
+
+=> Started proxy.
+=> Started MongoDB.
+=> Started your app.
+
+=> App running at: http://localhost:3333/
+Can't listen on port 3333. Perhaps another Meteor is running?
+
+Running two copies of Meteor in the same application directory
+will not work. If something else is using port 3333, you can
+specify an alternative port with --port <port>.
+=> Client modified -- refreshing=> Client modified -- refreshing (x2)=> Client modified -- refreshing (x3)=> Client modified -- refreshing (x4)=> Client modified -- refreshing (x5)=> Client modified -- refreshing (x6)=> Client modified -- refreshing (x7)=> Client modified -- refreshing (x8)=> Client modified -- refreshing (x9)=> Client modified -- refreshing (x10)=> Client modified -- refreshing (x11)[[[[[ ~/Code/ClinicalFramework/framework-doc-generator/webapp ]]]]]
+
+=> Started proxy.
+=> Started MongoDB.
+=> Started your app.
+
+=> App running at: http://localhost:3333/
+=> Server modified -- restarting...                                   Your app has been updated to null from Meteor 1.2.1. Restart meteor to use the
+new release.
