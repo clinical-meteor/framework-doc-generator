@@ -42,9 +42,6 @@ fortawesome:fontawesome
 grove:less
 
 # clinical framework packages
-# clinical:env@3.1.9
-# clinical:overlays
-# clinical:keybindings
 
 clinical:env
 clinical:router
@@ -61,4 +58,5 @@ clinical:active-record
 clinical:autoform
 
 clinical:user-model
+
 #clinical:graphs-dailystats@2.4.4
