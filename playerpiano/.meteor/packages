@@ -18,13 +18,11 @@
 meteor-platform
 templating
 
-
 # existing packages available in 1.1.0.3 which we can leave as-is
 mongo                   # The database Meteor supports right now
 session                 # Client-side reactive dictionary for your app
 jquery                  # Helpful client-side library
 tracker                 # Meteor's client-side reactive programming library
-
 
 # (in)security packages we should remove at some point
 #autopublish             # Publish all data to the clients (for prototyping)
