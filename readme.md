@@ -23,6 +23,10 @@ git submodule foreach git pull origin master
 git submodule sync
 git submodule update --init --recursive # use submodules
 
+# or use our package fetch script
+# starrynight fetch
+
+
 
 # build the docs
 meteor-jsdoc init
