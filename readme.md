@@ -56,7 +56,7 @@ starrynight fetch
 =====================================
 #### Continuous Integration Status
 
-https://circleci.com/gh/clinical-meteor/framework-doc-generator/tree/master
+https://circleci.com/gh/clinical-meteor/framework-doc-generator
 
 ==============================
 #### Licensing
