@@ -16,8 +16,8 @@ machine:
 ## Customize checkout
 checkout:
  post:
-   - git submodule sync
-   - git submodule update --init --recursive # use submodules
+   #- git submodule sync
+   #- git submodule update --init --recursive # use submodules
 
 ## Customize dependencies
 dependencies:

@@ -7,7 +7,8 @@
     "exclude": [
       ".git",
       ".meteor",
-      "node_modules"
+      "node_modules",
+      ".gagarin"
     ],
     "includePattern": ".+\\.js(x|doc)?$"
   }
