@@ -3,7 +3,6 @@
 Use this app to generate the API documentation for a framework or track.  
 [http://clinical-docs.meteor.com](http://clinical-docs.meteor.com)
 
-
 ==============================
 #### Installation
 
@@ -24,8 +23,6 @@ npm install -g .     # may need sudo
 # fetch the latest packages we want to scrape documentation from
 cd ../playerpiano
 starrynight fetch
-
-
 
 
 # build the docs
