@@ -16,15 +16,15 @@ git clone http://github.com/clinical-meteor/framework-doc-generator release-docs
 cd meteor-jsdoc
 npm install -g .     # may need sudo
 
-# fetch the latest packages we want to scrape documentation from
-# (a spoolbox in the player piano patter reads packages and copies data)
-cd ../playerpiano
-git submodule foreach git pull origin master
-git submodule sync
-git submodule update --init --recursive # use submodules
+# initialize your submodules if needed
+#git submodule foreach git pull origin master
+#git submodule sync
+#git submodule update --init --recursive # use submodules#
 
-# or use our package fetch script
-# starrynight fetch
+# fetch the latest packages we want to scrape documentation from
+cd ../playerpiano
+starrynight fetch
+
 
 
 
