@@ -23,3 +23,8 @@ markdown
 ecmascript
 simple:highlight.js
 simple:markdown-templating
+
+
+clinical:router
+clinical:active-layout
+clinical:glass-ui

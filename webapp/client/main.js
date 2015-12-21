@@ -1,3 +1,5 @@
+Session.set('useCardLayout', false);
+
 Template.registerHelper("sections", function() {
   let ret = [];
 
