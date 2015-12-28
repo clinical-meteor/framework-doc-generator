@@ -671,6 +671,7 @@ DocsData = {
     "filepath": "https://github.com/clinical-meteor//packages/clinical-form-builder/client/components/builderPage/.tests/buildForm.js",
     "kind": "member",
     "lineno": 1,
+    "locus": "Testing",
     "longname": "FormBuilder..buildForm()",
     "memberof": "FormBuilder.",
     "name": "buildForm()",
@@ -1430,30 +1431,6 @@ DocsData = {
     "scope": "global",
     "summary": "Represents a User"
   },
-  "User./testGetCollaborations": {
-    "examples": [
-      "```js\nMeteor.call('testGetCollaborations');\n```"
-    ],
-    "filepath": "https://github.com/clinical-meteor//packages/clinical-user-model/lib/user-model.js",
-    "kind": "member",
-    "lineno": 192,
-    "locus": "Server",
-    "longname": "User./testGetCollaborations",
-    "memberof": "User",
-    "name": "/testGetCollaborations",
-    "returns": [
-      {
-        "type": {
-          "names": [
-            "Array"
-          ]
-        }
-      }
-    ],
-    "scope": "static",
-    "summary": "Write all the User collaborations to the server console log.",
-    "version": "1.2.3"
-  },
   "User.defaultEmail": {
     "examples": [
       "```js\nvar selectedUser = Meteor.users.findOne({username: \"janedoe\"});\nconsole.log(selectedUser.defaultEmail());\n```"
@@ -1734,6 +1711,7 @@ DocsData = {
     "filepath": "https://github.com/clinical-meteor//packages/clinical-user-model/client/template.helpers.js",
     "kind": "member",
     "lineno": 1,
+    "locus": "Client, Blaze Templates",
     "longname": "User.{{fullName}}",
     "memberof": "User",
     "name": "{{fullName}}",

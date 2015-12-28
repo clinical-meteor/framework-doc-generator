@@ -65,7 +65,6 @@ DocsNames = [
   "Theme.setAppTitle",
   "Theme.setBackgroundColor",
   "User",
-  "User./testGetCollaborations",
   "User.defaultEmail",
   "User.displayName",
   "User.familyName",

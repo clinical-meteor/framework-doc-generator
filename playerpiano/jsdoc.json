@@ -3,7 +3,7 @@
   "nodePath": "",
   "docsPath": "../webapp",
   "meteorPort": 3333,
-  "initMeteor": true,
+  "initMeteor": false,
   "updateMeteor": true,
   "preamble": true,
   "projectRepo": "https://github.com/clinical-meteor/",
