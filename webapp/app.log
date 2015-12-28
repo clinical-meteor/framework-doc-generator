@@ -5,4 +5,57 @@
 => Started your app.
 
 => App running at: http://localhost:3333/
-=> Client modified -- refreshing=> Client modified -- refreshing (x2)=> Client modified -- refreshing (x3)=> Client modified -- refreshing (x4)
+=> Client modified -- refreshing=> Client modified -- refreshing (x2)=> Client modified -- refreshing (x3)=> Client modified -- refreshing (x4)[[[[[ ~/Code/ClinicalFramework/framework-doc-generator/webapp ]]]]]
+
+=> Started proxy.
+=> Started MongoDB.
+=> Started your app.
+
+=> App running at: http://localhost:3333/
+=> Client modified -- refreshing=> Client modified -- refreshing (x2)=> Client modified -- refreshing (x3)
+=> Server modified -- restarting...                                   => Errors prevented startup:
+   
+   While selecting package versions:
+   error: unknown package in top-level dependencies: clinical:extend-api
+   
+=> Your application has errors. Waiting for file change.
+=> Modified -- restarting.
+
+Changes to your project's package version selections:
+
+accounts-base                     added, version 1.2.2
+aldeed:collection2                added, version 2.3.3
+aldeed:simple-schema              added, version 1.3.3
+awatson1978:fonts-helveticas      added, version 1.0.4
+clinical:active-layout            added, version 0.5.1
+clinical:barcode                  added, version 3.0.1
+clinical:base-model               added, version 1.3.0
+clinical:extended-api             added, version 2.1.2
+clinical:glass-ui                 added, version 1.3.5
+clinical:keybindings              added, version 1.2.3
+clinical:modals                   added, version 1.0.6
+clinical:router                   added, version 2.0.17
+clinical:router-location          added, version 2.0.14
+clinical:router-middleware-stack  added, version 2.0.13
+clinical:router-url               added, version 2.0.15
+clinical:theming                  added, version 0.2.0
+clinical:user-model               added, version 1.4.2
+coffeescript                      added, version 1.0.11
+ddp-rate-limiter                  added, version 1.0.0
+fortawesome:fontawesome           added, version 4.3.0
+grove:less                        added, version 0.1.1
+iron:controller                   added, version 1.0.12
+iron:core                         added, version 1.0.11
+iron:dynamic-template             added, version 1.0.12
+iron:layout                       added, version 1.0.12
+localstorage                      added, version 1.0.5
+matb33:collection-hooks           added, version 0.7.15
+meteor-platform                   added, version 1.2.3
+mousetrap:mousetrap               added, version 1.4.6_1
+rate-limit                        added, version 1.0.0
+service-configuration             added, version 1.0.5
+socialize:server-time             added, version 0.1.2
+tmeasday:publish-with-relations   added, version 0.2.0
+
+=> Meteor server restarted
+=> Client modified -- refreshing=> Client modified -- refreshing (x2)=> Client modified -- refreshing (x3)=> Client modified -- refreshing (x4)=> Client modified -- refreshing (x5)=> Client modified -- refreshing (x6)=> Client modified -- refreshing (x7)=> Client modified -- refreshing (x8)=> Client modified -- refreshing (x9)=> Client modified -- refreshing (x10)=> Client modified -- refreshing (x11)=> Client modified -- refreshing (x12)=> Client modified -- refreshing (x13)=> Client modified -- refreshing (x14)=> Client modified -- refreshing (x15)=> Client modified -- refreshing (x16)=> Client modified -- refreshing (x17)=> Client modified -- refreshing (x18)

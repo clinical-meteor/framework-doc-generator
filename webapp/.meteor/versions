@@ -19,13 +19,14 @@ clinical:active-layout@0.5.1
 clinical:barcode@3.0.1
 clinical:base-model@1.3.0
 clinical:extended-api@2.1.2
-clinical:glass-ui@1.3.1
-clinical:keybindings@1.2.0
+clinical:glass-ui@1.3.5
+clinical:keybindings@1.2.3
 clinical:modals@1.0.6
 clinical:router@2.0.17
 clinical:router-location@2.0.14
 clinical:router-middleware-stack@2.0.13
 clinical:router-url@2.0.15
+clinical:theming@0.2.0
 clinical:user-model@1.4.2
 coffeescript@1.0.11
 ddp@1.2.2
