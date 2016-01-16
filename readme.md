@@ -46,10 +46,11 @@ starrynight run-tests --framework gagarin --webdriver http://localhost:9515 --pa
 
 ```bash
 cd playerpiano/packages
-git submodule add http://github.com/clinical-meteor/my-new-package
-cd ..
-nano .meteor/repos
-  http://github.com/clinical-meteor/my-new-package
+nano git-packages.json
+#git submodule add http://github.com/clinical-meteor/my-new-package
+#cd ..
+#nano .meteor/repos
+#  http://github.com/clinical-meteor/my-new-package
 starrynight fetch
 ```
 

@@ -1,0 +1,65 @@
+{
+  "clinical:active-entry": {
+    "git": "https://github.com/clinical-meteor/clinical-active-entry.git"
+  },
+  "clinical:active-layout": {
+    "git": "https://github.com/clinical-meteor/clinical-active-layout.git"
+  },
+  "clinical:active-record": {
+    "git": "https://github.com/clinical-meteor/clinical-active-record.git"
+  },
+  "clinical:autoform": {
+    "git": "https://github.com/clinical-meteor/clinical-autoform.git"
+  },
+  "clinical:collaborations": {
+    "git": "https://github.com/clinical-meteor/clinical-collaborations.git"
+  },
+  "clinical:collaborations-ui": {
+    "git": "https://github.com/clinical-meteor/clinical-collaborations-ui.git"
+  },
+  "clinical:env": {
+    "git": "https://github.com/clinical-meteor/clinical-env.git"
+  },
+  "clinical:extended-api": {
+    "git": "https://github.com/clinical-meteor/clinical-extended-api.git"
+  },
+  "clinical:form-builder": {
+    "git": "https://github.com/clinical-meteor/clinical-form-builder.git"
+  },
+  "clinical:glass-ui": {
+    "git": "https://github.com/clinical-meteor/clinical-glass-ui.git"
+  },
+  "clinical:graphs-dailystats": {
+    "git": "https://github.com/clinical-meteor/clinical-graphs-dailystats.git"
+  },
+  "clinical:hipaa-audit-log": {
+    "git": "https://github.com/clinical-meteor/clinical-hipaa-audit-log.git"
+  },
+  "clinical:hipaa-logger": {
+    "git": "https://github.com/clinical-meteor/hipaa-logger.git"
+  },
+  "clinical:keybindings": {
+    "git": "https://github.com/clinical-meteor/clinical-keybindings.git"
+  },
+  "clinical:roles": {
+    "git": "https://github.com/clinical-meteor/clinical-roles.git"
+  },
+  "clinical:router": {
+    "git": "https://github.com/clinical-meteor/clinical-router.git"
+  },
+  "clinical:router-url": {
+    "git": "https://github.com/clinical-meteor/clinical-router-url.git"
+  },
+  "clinical:schema-hydrator": {
+    "git": "https://github.com/clinical-meteor/clinical-schema-hydrator.git"
+  },
+  "clinical:theming": {
+    "git": "https://github.com/clinical-meteor/clinical-theming.git"
+  },
+  "clinical:active-users": {
+    "git": "https://github.com/clinical-meteor/clinical-active-users.git"
+  },
+  "clinical:active-user-model": {
+    "git": "https://github.com/clinical-meteor/clinical-active-user-model.git"
+  }
+}
