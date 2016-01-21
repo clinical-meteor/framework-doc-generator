@@ -3,9 +3,3 @@ Template.docs.helpers({
     return !!Template.preamble;
   },
 });
-
-Template.sidebar.helpers({
-  showPreambleToc() {
-    return !!Template.preamble;
-  }
-});

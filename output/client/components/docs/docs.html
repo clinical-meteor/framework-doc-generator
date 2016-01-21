@@ -1,6 +1,9 @@
 <template name="docs">
   <div id="docs">
     <div class="docs-body">
+      <div id="nav">
+        {{> sidebar}}
+      </div>
       <div class="main-content">
         <div id="main">
           {{#if preambleExists}}
@@ -23,5 +26,16 @@
         </div>
       </div>
     </div>
+  </div>
+</template>
+
+<template name="sidebar">
+  <div id="nav-inner">
+    {{#if showPreambleToc}}
+      <!-- <div id="preamble-toc">
+        {{> preambleToc}}
+      </div> -->
+    {{/if}}
+    {{> tableOfContents}}
   </div>
 </template>

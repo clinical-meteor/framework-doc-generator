@@ -1,14 +1,11 @@
 Router.configure({
   layoutTemplate: 'appLayout',
   yieldTemplates: {
-    'defaultNavbarHeader': {
+    'navbarHeader': {
       to: 'header'
     },
     'navbarFooter': {
       to: 'footer'
-    },
-    'sidebar': {
-      to: 'westPanel'
     },
     'reactiveOverlaysTemplate': {
       to: 'overlays'
@@ -20,14 +17,11 @@ Router.route('/', {
   name: 'homeRoute',
   template: 'docs',
   yieldTemplates: {
-    'defaultNavbarHeader': {
+    'navbarHeader': {
       to: 'header'
     },
     'navbarFooter': {
       to: 'footer'
-    },
-    'sidebar': {
-      to: 'westPanel'
     },
     'reactiveOverlaysTemplate': {
       to: 'overlays'

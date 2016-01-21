@@ -226,4 +226,39 @@ service-configuration            added, version 1.0.5
 socialize:server-time            added, version 0.1.2
 tmeasday:publish-with-relations  added, version 0.2.0
 
+                                   => Meteor server restarted[[[[[ ~/Code/ClinicalFramework/framework-doc-generator/webapp ]]]]]
+
+=> Started proxy.
+=> Started MongoDB.
+=> Started your app.
+
+=> App running at: http://localhost:3333/
+=> Client modified -- refreshing=> Client modified -- refreshing (x2)=> Client modified -- refreshing (x3)
+=> Server modified -- restarting...
+Changes to your project's package version selections:
+
+clinical:theming  added, version 0.4.5
+
+                                   => Meteor server restarted[[[[[ ~/Code/ClinicalFramework/framework-doc-generator/webapp ]]]]]
+
+=> Started proxy.
+=> Started MongoDB.
+=> Started your app.
+
+=> App running at: http://localhost:3333/
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...
+Changes to your project's package version selections:
+
+clinical:active-layout   upgraded from 0.5.1 to 0.7.5
+clinical:barcode         added, version 3.0.1
+clinical:glass-ui        added, version 1.3.7
+fortawesome:fontawesome  added, version 4.3.0
+
+                                   => Server modified -- restarting...
+Changes to your project's package version selections:
+
+clinical:theming  downgraded from 0.4.5 to 0.4.4
+
                                    => Meteor server restarted
+=> Client modified -- refreshing

@@ -1,0 +1,104 @@
+[[[[[ ~/Code/ClinicalFramework/framework-doc-generator/output ]]]]]
+
+=> Started proxy.
+=> Started MongoDB.
+
+Changes to your project's package version selections:
+
+accounts-base                     added, version 1.2.2
+aldeed:collection2                added, version 2.3.3
+aldeed:simple-schema              added, version 1.3.3
+awatson1978:fonts-helveticas      added, version 1.0.4
+clinical:active-layout            added, version 0.7.5
+clinical:barcode                  added, version 3.0.1
+clinical:base-model               added, version 1.3.0
+clinical:extended-api             added, version 2.1.2
+clinical:glass-ui                 added, version 1.3.7
+clinical:keybindings              added, version 1.2.4
+clinical:modals                   added, version 1.0.7
+clinical:router                   added, version 2.0.17
+clinical:router-location          added, version 2.0.14
+clinical:router-middleware-stack  added, version 2.0.13
+clinical:router-url               added, version 2.0.15
+clinical:theming                  added, version 0.2.2
+clinical:user-model               added, version 1.4.2
+coffeescript                      added, version 1.0.11
+ddp-rate-limiter                  added, version 1.0.0
+fortawesome:fontawesome           added, version 4.3.0
+grove:less                        added, version 0.1.1
+iron:controller                   added, version 1.0.12
+iron:core                         added, version 1.0.11
+iron:dynamic-template             added, version 1.0.12
+iron:layout                       added, version 1.0.12
+localstorage                      added, version 1.0.5
+matb33:collection-hooks           added, version 0.7.15
+meteor-platform                   added, version 1.2.3
+mousetrap:mousetrap               added, version 1.4.6_1
+rate-limit                        added, version 1.0.0
+service-configuration             added, version 1.0.5
+socialize:server-time             added, version 0.1.2
+tmeasday:publish-with-relations   added, version 0.2.0
+
+=> Started your app.
+
+=> App running at: http://localhost:3333/
+[[[[[ ~/Code/ClinicalFramework/framework-doc-generator/output ]]]]]
+
+=> Started proxy.
+=> Started MongoDB.
+=> Started your app.
+
+=> App running at: http://localhost:3333/
+=> Server modified -- restarting...                                   => Server modified -- restarting...[[[[[ ~/Code/ClinicalFramework/framework-doc-generator/output ]]]]]
+
+=> Started proxy.
+=> Started MongoDB.
+
+Changes to your project's package version selections:
+
+clinical:active-layout   downgraded from 0.7.5 to 0.5.1
+clinical:barcode         removed from your project
+clinical:glass-ui        removed from your project
+clinical:theming         removed from your project
+fortawesome:fontawesome  removed from your project
+
+=> Started your app.
+
+=> App running at: http://localhost:3333/
+=> Client modified -- refreshing=> Client modified -- refreshing (x2)
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Server modified -- restarting...
+Changes to your project's package version selections:
+
+clinical:active-layout   upgraded from 0.5.1 to 0.7.5
+clinical:barcode         added, version 3.0.1
+clinical:glass-ui        added, version 1.3.7
+clinical:theming         added, version 0.2.2
+fortawesome:fontawesome  added, version 4.3.0
+
+                                   => Meteor server restarted[[[[[ ~/Code/ClinicalFramework/framework-doc-generator/output ]]]]]
+
+=> Started proxy.
+=> Started MongoDB.
+=> Started your app.
+
+=> App running at: http://localhost:3333/
+=> Server modified -- restarting...                                   => Meteor server restarted[[[[[ ~/Code/ClinicalFramework/framework-doc-generator/output ]]]]]
+
+=> Started proxy.
+=> Started MongoDB.
+=> Started your app.
+
+=> App running at: http://localhost:3333/
+=> Server modified -- restarting...                                   => Server modified -- restarting...
+Changes to your project's package version selections:
+
+clinical:theming  upgraded from 0.2.2 to 0.4.4
+
+                                   => Meteor server restarted[[[[[ ~/Code/ClinicalFramework/framework-doc-generator/output ]]]]]
+
+=> Started proxy.
+=> Started MongoDB.
+=> Started your app.
+
+=> App running at: http://localhost:3333/
