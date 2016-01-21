@@ -664,6 +664,21 @@ DocsData = {
     "summary": "Detects if a specific environment variable was exposed from the server.",
     "version": "1.2.3"
   },
+  "FormBuilder..buildForm()": {
+    "examples": [
+      "```js\nclient.a().b().c().buildForm().end();\n```"
+    ],
+    "filepath": "https://github.com/clinical-meteor//packages/clinical-form-builder/client/components/builderPage/.tests/buildForm.js",
+    "kind": "member",
+    "lineno": 1,
+    "locus": "Testing",
+    "longname": "FormBuilder..buildForm()",
+    "memberof": "FormBuilder.",
+    "name": "buildForm()",
+    "scope": "static",
+    "summary": "Configure the global Theme object for the application.",
+    "version": "1.2.3"
+  },
   "FormBuilder.add": {
     "deprecated": true,
     "filepath": "https://github.com/clinical-meteor//packages/clinical-form-builder/lib/FormBuilder.js",
@@ -1326,6 +1341,76 @@ DocsData = {
     "scope": "static",
     "summary": "Serializes a json object into a text string."
   },
+  "Theme.configure": {
+    "examples": [
+      "```js\nTheme.configure({\n  appTitle: \"Nifty Spiffy App\",\n  backgroundColor: \"lightgray\",\n  backgroundUrl: \"\"\n});\n```"
+    ],
+    "filepath": "https://github.com/clinical-meteor//packages/clinical-theming/objects/Theme.js",
+    "kind": "member",
+    "lineno": 14,
+    "longname": "Theme.configure",
+    "memberof": "Theme",
+    "name": "configure",
+    "scope": "static",
+    "summary": "Configure the global Theme object for the application.",
+    "version": "1.2.3"
+  },
+  "Theme.getAppTitle": {
+    "examples": [
+      "```js\nTemplate.appLayout.helpers({\n  getTitleText: function () {\n    return Theme.getAppTitle();\n  }\n});\n```"
+    ],
+    "filepath": "https://github.com/clinical-meteor//packages/clinical-theming/objects/Theme.js",
+    "kind": "member",
+    "lineno": 32,
+    "longname": "Theme.getAppTitle",
+    "memberof": "Theme",
+    "name": "getAppTitle",
+    "scope": "static",
+    "summary": "Get the title for the application.",
+    "version": "1.2.3"
+  },
+  "Theme.paintBackgroundColor": {
+    "examples": [
+      "```js\nTheme.paintBackgroundColor();\n```"
+    ],
+    "filepath": "https://github.com/clinical-meteor//packages/clinical-theming/objects/Theme.js",
+    "kind": "member",
+    "lineno": 98,
+    "longname": "Theme.paintBackgroundColor",
+    "memberof": "Theme",
+    "name": "paintBackgroundColor",
+    "scope": "static",
+    "summary": "Triggers a repaint of the body background, using whatever background color value is set in the Theme object.",
+    "version": "1.2.3"
+  },
+  "Theme.setAppTitle": {
+    "examples": [
+      "```js\nTheme.setAppTitle($('#appTitleInput').val());\n```"
+    ],
+    "filepath": "https://github.com/clinical-meteor//packages/clinical-theming/objects/Theme.js",
+    "kind": "member",
+    "lineno": 55,
+    "longname": "Theme.setAppTitle",
+    "memberof": "Theme",
+    "name": "setAppTitle",
+    "scope": "static",
+    "summary": "Set the title for the application.",
+    "version": "1.2.3"
+  },
+  "Theme.setBackgroundColor": {
+    "examples": [
+      "```js\nTheme.setBackgroundColor('blue');\nTheme.setBackgroundColor('green');\nTheme.setBackgroundColor('maroon');\nTheme.setBackgroundColor('gray');\nTheme.setBackgroundColor('lightgray');\nTheme.setBackgroundColor('gradient');\nTheme.setBackgroundColor('background-color: #808080;');\n```"
+    ],
+    "filepath": "https://github.com/clinical-meteor//packages/clinical-theming/objects/Theme.js",
+    "kind": "member",
+    "lineno": 76,
+    "longname": "Theme.setBackgroundColor",
+    "memberof": "Theme",
+    "name": "setBackgroundColor",
+    "scope": "static",
+    "summary": "Set the background color that the app should use.",
+    "version": "1.2.3"
+  },
   "User": {
     "filepath": "https://github.com/clinical-meteor//packages/clinical-user-model/lib/user-model.js",
     "kind": "class",
@@ -1345,30 +1430,6 @@ DocsData = {
     ],
     "scope": "global",
     "summary": "Represents a User"
-  },
-  "User./testGetCollaborations": {
-    "examples": [
-      "```js\nMeteor.call('testGetCollaborations');\n```"
-    ],
-    "filepath": "https://github.com/clinical-meteor//packages/clinical-user-model/lib/user-model.js",
-    "kind": "member",
-    "lineno": 192,
-    "locus": "Server",
-    "longname": "User./testGetCollaborations",
-    "memberof": "User",
-    "name": "/testGetCollaborations",
-    "returns": [
-      {
-        "type": {
-          "names": [
-            "Array"
-          ]
-        }
-      }
-    ],
-    "scope": "static",
-    "summary": "Write all the User collaborations to the server console log.",
-    "version": "1.2.3"
   },
   "User.defaultEmail": {
     "examples": [
@@ -1650,6 +1711,7 @@ DocsData = {
     "filepath": "https://github.com/clinical-meteor//packages/clinical-user-model/client/template.helpers.js",
     "kind": "member",
     "lineno": 1,
+    "locus": "Client, Blaze Templates",
     "longname": "User.{{fullName}}",
     "memberof": "User",
     "name": "{{fullName}}",

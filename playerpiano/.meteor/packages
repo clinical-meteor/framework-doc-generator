@@ -35,12 +35,10 @@ clinical:glass-ui
 anti:gagarin@=0.4.11
 
 # other packages used by clinical framework which need to be cleaned up
-awatson1978:fonts-helveticas
-fortawesome:fontawesome
+clinical:fonts
 grove:less
 
 # clinical framework packages
-
 clinical:env
 clinical:router
 clinical:active-entry
@@ -56,4 +54,3 @@ clinical:active-record
 clinical:autoform
 
 clinical:user-model
-#clinical:graphs-dailystats@2.4.4
