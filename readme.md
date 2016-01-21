@@ -3,6 +3,9 @@
 Use this app to generate the API documentation for a framework or track.  
 [http://clinical-docs.meteor.com](http://clinical-docs.meteor.com)
 
+
+[![Circle CI](https://circleci.com/gh/clinical-meteor/framework-doc-generator/tree/master.svg?style=svg)](https://circleci.com/gh/clinical-meteor/framework-doc-generator/tree/master)
+
 ==============================
 #### Installation
 
