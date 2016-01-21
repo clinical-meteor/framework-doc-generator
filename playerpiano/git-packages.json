@@ -17,8 +17,14 @@
   "clinical:collaborations-ui": {
     "git": "https://github.com/clinical-meteor/clinical-collaborations-ui.git"
   },
+  "clinical:device": {
+    "git": "https://github.com/clinical-meteor/clinical-device.git"
+  },
   "clinical:env": {
     "git": "https://github.com/clinical-meteor/clinical-env.git"
+  },
+  "clinical:error-pages": {
+    "git": "https://github.com/clinical-meteor/clinical-error-pages.git"
   },
   "clinical:extended-api": {
     "git": "https://github.com/clinical-meteor/clinical-extended-api.git"
@@ -55,6 +61,12 @@
   },
   "clinical:theming": {
     "git": "https://github.com/clinical-meteor/clinical-theming.git"
+  },
+  "clinical:static-pages": {
+    "git": "https://github.com/clinical-meteor/clinical-static-pages.git"
+  },
+  "clinical:theming-ui": {
+    "git": "https://github.com/clinical-meteor/clinical-theming-ui.git"
   },
   "clinical:active-users": {
     "git": "https://github.com/clinical-meteor/clinical-active-users.git"
