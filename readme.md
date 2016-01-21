@@ -3,6 +3,9 @@
 Use this app to generate the API documentation for a framework or track.  
 [http://clinical-docs.meteor.com](http://clinical-docs.meteor.com)
 
+
+[![Circle CI](https://circleci.com/gh/clinical-meteor/framework-doc-generator/tree/master.svg?style=svg)](https://circleci.com/gh/clinical-meteor/framework-doc-generator/tree/master)
+
 ==============================
 #### Installation
 
@@ -23,7 +26,46 @@ npm install -g .     # may need sudo
 # fetch the latest packages we want to scrape documentation from
 cd ../playerpiano
 starrynight fetch
+````
 
+==============================
+#### Running Verification Tests across the Release Track
+
+````bash
+# fetch the latest packages we want to scrape documentation from
+cd ../playerpiano
+starrynight fetch
+
+## run tests on framework, and publish to continuous integration servers
+starrynight fetch
+starrynight run-tests --framework gagarin --webdriver http://localhost:9515 --path /packages/*/tests/gagarin/**/*.js
+starrynight run-tests --type package-verification
+````
+
+
+====================================================
+#### Adding New Packages to the Release Track
+
+```bash
+cd playerpiano/packages
+
+#when you want to just pull into the local repository to QA check
+nano git-packages.json
+#git submodule add http://github.com/clinical-meteor/my-new-package
+#cd ..
+#nano .meteor/repos
+#  http://github.com/clinical-meteor/my-new-package
+starrynight fetch
+
+# and later, when you're ready to actually publish
+nano clinical.meteor.json
+```
+
+==============================
+#### Generating Documentation
+
+````bash
+cd playerpiano/packages
 
 # build the docs
 meteor-jsdoc init
@@ -35,24 +77,7 @@ meteor-jsdoc start
 ## deploy/publish the docs for a release
 cd ../webapp
 meteor deploy release-docs.meteor.com
-
-## run tests on framework, and publish to continuous integration servers
-starrynight fetch
-starrynight run-tests --framework gagarin --webdriver http://localhost:9515 --path /packages/*/tests/gagarin/**/*.js
 ````
-
-====================================================
-#### Adding New Packages to the Release Track
-
-```bash
-cd playerpiano/packages
-nano git-packages.json
-#git submodule add http://github.com/clinical-meteor/my-new-package
-#cd ..
-#nano .meteor/repos
-#  http://github.com/clinical-meteor/my-new-package
-starrynight fetch
-```
 
 
 =====================================
