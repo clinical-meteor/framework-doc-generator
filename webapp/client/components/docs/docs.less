@@ -161,9 +161,14 @@ em {
   font-style: italic;
 }
 
-a:hover {
-  background-color: yellow;
+.apiItem:hover {
+  //background-color: yellow;
+  //font-weight:bold;
+  color: red;
+  cursor: pointer;
 }
+
+
 /** Main pane **/
 #main {
   margin     : 10px;
@@ -176,7 +181,7 @@ a:hover {
 }
 
 #main h1 {
-  border-style: solid none none none;
+  //border-style: solid none none none;
   border-color: #999;
   border-width: 2px;
 }
@@ -395,14 +400,14 @@ ol {
   margin: 1em 0;
 }
 
-#main a.selflink:link,
-#main a.selflink:visited,
-#main a.selflink:hover {
-  text-decoration: none;
-  border         : none;
-  color          : inherit;
-  background     : none;
-}
+// #main a.selflink:link,
+// #main a.selflink:visited,
+// #main a.selflink:hover {
+//   text-decoration: none;
+//   border         : none;
+//   color          : inherit;
+//   background     : none;
+// }
 /** layout control **/
 #menu-ico {
   font-size: 30px;
@@ -446,7 +451,7 @@ ol {
 }
 
 .main-content {
-  position   : absolute;
+  //position   : absolute;
   width      : 100%;
   top        : @top-bar-height;
   bottom     : 0;
@@ -797,10 +802,10 @@ pre {
     color          : black;
   }
 
-  a:hover {
-    margin : 0 -5px;
-    padding: 2px 5px;
-  }
+  // a:hover {
+  //   margin : 0 -5px;
+  //   padding: 2px 5px;
+  // }
 
   h1 {
     font-size: 1.3em;
@@ -816,7 +821,8 @@ pre {
   h3 {
     font-size   : 0.8em;
     font-weight : normal;
-    margin      : 4px 0 2px;
+    margin: 0px;
+    height: 20px;
     padding-left: 10px;
     color       : #333;
   }

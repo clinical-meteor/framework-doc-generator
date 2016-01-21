@@ -1,9 +1,13 @@
 <template name="apiBoxTitle">
   <h3 id="{{id}}" class="api-title">
-    {{#if nameContainsBraces }}
+    {{#if isBlazeApi }}
       <a class="name selflink" href="#{{id}}" name="{{id}}">{{name}}</a>
     {{else}}
-      <a class="name selflink" href="#{{id}}" name="{{id}}">{{longname}}</a>
+      {{#if isTestingApi }}
+        <a class="name selflink" href="#{{id}}" name="{{id}}">{{name}}</a>
+      {{else}}
+        <a class="name selflink" href="#{{id}}" name="{{id}}">{{longname}}</a>
+      {{/if}}
     {{/if}}
 
     {{#if locus}}
