@@ -1,7 +1,9 @@
 if(Meteor.isClient){
-  Header.configure({
+  ActiveLayout.configure({
     hasEntryControls: false,
-    showHelp: false,
+    help: {
+      display: false
+    },
     classes: {
       header: "",
       title: "",

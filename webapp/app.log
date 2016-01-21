@@ -175,4 +175,55 @@ service-configuration             added, version 1.0.5
 socialize:server-time             added, version 0.1.2
 tmeasday:publish-with-relations   added, version 0.2.0
 
+                                   => Meteor server restarted[[[[[ ~/Code/ClinicalFramework/framework-doc-generator/webapp ]]]]]
+
+=> Started proxy.
+=> Started MongoDB.
+=> Started your app.
+
+=> App running at: http://localhost:3333/
+=> Client modified -- refreshing[[[[[ ~/Code/ClinicalFramework/framework-doc-generator/webapp ]]]]]
+
+=> Started proxy.
+=> Started MongoDB.
+=> Started your app.
+
+=> App running at: http://localhost:3333/
+=> Server modified -- restarting...
+Changes to your project's package version selections:
+
+clinical:router                   added, version 2.0.17
+clinical:router-location          added, version 2.0.14
+clinical:router-middleware-stack  added, version 2.0.13
+clinical:router-url               added, version 2.0.15
+iron:controller                   added, version 1.0.12
+iron:core                         added, version 1.0.11
+iron:dynamic-template             added, version 1.0.12
+iron:layout                       added, version 1.0.12
+
+                                   => Server modified -- restarting...
+Changes to your project's package version selections:
+
+accounts-base                    added, version 1.2.2
+aldeed:collection2               added, version 2.3.3
+aldeed:simple-schema             added, version 1.3.3
+awatson1978:fonts-helveticas     added, version 1.0.4
+clinical:active-layout           added, version 0.5.1
+clinical:base-model              added, version 1.3.0
+clinical:extended-api            added, version 2.1.2
+clinical:keybindings             added, version 1.2.4
+clinical:modals                  added, version 1.0.7
+clinical:user-model              added, version 1.4.2
+coffeescript                     added, version 1.0.11
+ddp-rate-limiter                 added, version 1.0.0
+grove:less                       added, version 0.1.1
+localstorage                     added, version 1.0.5
+matb33:collection-hooks          added, version 0.7.15
+meteor-platform                  added, version 1.2.3
+mousetrap:mousetrap              added, version 1.4.6_1
+rate-limit                       added, version 1.0.0
+service-configuration            added, version 1.0.5
+socialize:server-time            added, version 0.1.2
+tmeasday:publish-with-relations  added, version 0.2.0
+
                                    => Meteor server restarted
