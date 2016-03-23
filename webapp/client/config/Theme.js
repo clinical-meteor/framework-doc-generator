@@ -1,7 +1,7 @@
 Meteor.startup(function (){
   Theme.configure({
     background: {
-      color: "#444444"
+      color: "#666666"
     },
     page: {
       background: "#ffffff"
