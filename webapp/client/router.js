@@ -1,7 +1,7 @@
 Router.configure({
   layoutTemplate: 'appLayout',
   yieldTemplates: {
-    'defaultNavbarHeader': {
+    'navbarHeader': {
       to: 'header'
     },
     'navbarFooter': {
@@ -20,7 +20,7 @@ Router.route('/', {
   name: 'homeRoute',
   template: 'docs',
   yieldTemplates: {
-    'defaultNavbarHeader': {
+    'navbarHeader': {
       to: 'header'
     },
     'navbarFooter': {

@@ -26,5 +26,8 @@ simple:markdown-templating
 
 clinical:router
 clinical:active-layout
+clinical:active-layout-reset
 clinical:theming
 clinical:glass-ui
+
+nemo64:bootstrap

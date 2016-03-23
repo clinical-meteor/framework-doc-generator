@@ -7,7 +7,7 @@
 standard-minifiers
 meteor-base
 mobile-experience
-mongo
+#mongo
 blaze-html-templates
 session
 jquery
