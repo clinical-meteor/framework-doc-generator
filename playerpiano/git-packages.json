@@ -137,9 +137,6 @@
   "clinical:hl7-resource-diagnostic-report": {
     "git": "https://github.com/clinical-meteor/hl7-resource-diagnostic-report.git"
   },
-  "clinical:hl7-resource-diagnostic-document-reference": {
-    "git": "https://github.com/clinical-meteor/hl7-resource-diagnostic-document-reference.git"
-  },
   "clinical:hl7-resource-document-reference": {
     "git": "https://github.com/clinical-meteor/hl7-resource-document-reference.git"
   },

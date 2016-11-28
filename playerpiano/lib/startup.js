@@ -22,7 +22,7 @@ if (Meteor.isClient){
 
 if (Meteor.isServer){
   Meteor.startup(function () {
-    Env.allow({});
+    //Env.allow({});
 
     // if (Meteor.users.find().count() === 0) {
     //   Accounts.createUser({

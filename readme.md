@@ -32,14 +32,19 @@ starrynight fetch
 #### Running Verification Tests across the Release Track
 
 ````bash
-# fetch the latest packages we want to scrape documentation from
 cd ../playerpiano
+
+# fetch the latest packages we want to run QA tests on
 starrynight fetch
 
+# install dev dependencies
+meteor npm install
+
+## launch selenium
+meteor npm run-script launch-chromedriver
+
 ## run tests on framework, and publish to continuous integration servers
-starrynight fetch
-starrynight run-tests --framework gagarin --webdriver http://localhost:9515 --path /packages/*/tests/gagarin/**/*.js
-starrynight run-tests --type package-verification
+meteor npm run-script package-verification-tests
 ````
 
 
@@ -49,15 +54,16 @@ starrynight run-tests --type package-verification
 ```bash
 cd playerpiano/packages
 
-#when you want to just pull into the local repository to QA check
+# update the manifest of the packages that get pull into the local repository to do QA check on
 nano git-packages.json
-#git submodule add http://github.com/clinical-meteor/my-new-package
-#cd ..
-#nano .meteor/repos
-#  http://github.com/clinical-meteor/my-new-package
+
+# fetch the packages
 starrynight fetch
 
-# and later, when you're ready to actually publish
+# fetch the packages
+meteor add clinical:new-package
+
+# and later, when ready to actually publish
 nano clinical.meteor.json
 ```
 
