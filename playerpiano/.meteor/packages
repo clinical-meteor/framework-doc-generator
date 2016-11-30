@@ -36,40 +36,41 @@ anti:gagarin@=0.4.12
 # other packages used by clinical framework which need to be cleaned up
 grove:less
 
+clinical:router
+clinical:router-location
+clinical:router-middleware-stack
+clinical:router-url
+
 # clinical framework packages
 clinical:active-entry
 clinical:active-layout
 clinical:active-layout-reset
 clinical:active-layout-pagescreen-config
-clinical:auto-resizing
-clinical:active-users
-clinical:autoform
-clinical:base-model
-clinical:collaborations
-clinical:collaborations-ui
-clinical:csv
-clinical:default-theme
-clinical:device
-clinical:env
-clinical:error-pages
-clinical:extended-api
-clinical:fonts
-clinical:form-builder
-clinical:glass-ui
-clinical:graphs-dailystats
-clinical:hipaa-audit-log
-clinical:hipaa-logger
-clinical:keybindings
-clinical:roles
-clinical:router
-clinical:router-location
-clinical:router-middleware-stack
-clinical:router-url
-clinical:schema-hydrator
-clinical:static-pages
-clinical:theming
-clinical:theming-ui
-clinical:user-model
+# clinical:auto-resizing
+# clinical:active-users
+# clinical:autoform
+# clinical:base-model
+# clinical:collaborations
+# clinical:collaborations-ui
+# clinical:csv
+# clinical:default-theme
+# clinical:device
+# clinical:env
+# clinical:error-pages
+# clinical:extended-api
+# clinical:fonts
+# clinical:form-builder
+# clinical:glass-ui
+# clinical:graphs-dailystats
+# clinical:hipaa-audit-log
+# clinical:hipaa-logger
+# clinical:keybindings
+# clinical:roles
+# clinical:schema-hydrator
+# clinical:static-pages
+# clinical:theming
+# clinical:theming-ui
+# clinical:user-model
 
 
 clinical:hl7-resource-allergy-intolerance
@@ -87,8 +88,10 @@ clinical:hl7-resource-document-reference
 clinical:hl7-resource-device
 clinical:hl7-resource-encounter
 clinical:hl7-resource-family-member-history
+clinical:hl7-resource-goal
 clinical:hl7-resource-healthcare-service
 clinical:hl7-resource-imaging-study
+clinical:hl7-resource-immunization
 clinical:hl7-resource-location
 clinical:hl7-resource-medication
 clinical:hl7-resource-medication-order
@@ -101,9 +104,12 @@ clinical:hl7-resource-patient
 clinical:hl7-resource-person
 clinical:hl7-resource-practitioner
 clinical:hl7-resource-procedure
+clinical:hl7-resource-procedure-request
 clinical:hl7-resource-questionnaire
 clinical:hl7-resource-questionnaire-response
 clinical:hl7-resource-related-person
 clinical:hl7-resource-risk-assessment
+clinical:hl7-resource-schedule
 clinical:hl7-resource-sequence
+clinical:hl7-resource-slot
 clinical:hl7-resource-specimen

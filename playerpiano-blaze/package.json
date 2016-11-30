@@ -1,0 +1,58 @@
+{
+  "name": "playerpiano",
+  "license": "MIT",
+  "version": "1.0.0",
+  "repository": "http://github.com/clinical-meteor/framework-doc-generator",
+  "description": "Utility for running distro QA tests and generating documentation.",
+  "scripts": {
+    "launch-selenium": "java -jar node_modules/selenium-standalone-jar/bin/selenium-server-standalone-3.0.1.jar",
+    "launch-chromedriver": "node_modules/chromedriver/bin/chromedriver",
+    "package-verification-tests": "gagarin packages/*/tests/gagarin/*.js --webdriver http://localhost:9515"
+  },
+  "devDependencies": {
+    "chromedriver": "2.25.1",
+    "selenium-standalone-jar": "3.0.1",
+    "gagarin": "0.4.12"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true,
+        "modules": true
+      }
+    },
+    "plugins": [
+      "react",
+      "meteor"
+    ],
+    "extends": [],
+    "globals": {
+      "server": false,
+      "browser": false,
+      "expect": false
+    },
+    "rules": {
+      "import/no-unresolved": 0,
+      "react/jsx-uses-vars": 1
+    }
+  },
+  "dependencies": {
+    "babel-runtime": "^6.18.0"
+  },
+  "cssModules": {
+    "extensions": [
+      "scss"
+    ],
+    "globalVariables": [
+      "node_modules/react-toolbox/lib/_colors.scss",
+      {
+        "theme-building": true
+      },
+      "client/main.scss"
+    ],
+    "outputJsFilePath": {
+      ".*node_modules/.*": "{dirname}/{basename}"
+    }
+  }
+}
