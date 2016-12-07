@@ -15,7 +15,7 @@ describe('FHIR Resources should exist on the client', function () {
     });
   });
 
-  it('AllergyIntolerances', function () {
+  it('Appointments', function () {
     return client.execute(function () {
       expect(Appointments).to.exist;
     });
