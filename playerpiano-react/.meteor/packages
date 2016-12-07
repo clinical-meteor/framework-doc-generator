@@ -4,67 +4,46 @@
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
-meteor-base@1.0.4               # Packages every Meteor app needs to have
-mobile-experience@1.0.4         # Packages for a great mobile UX
-mongo@1.1.14                    # The database Meteor supports right now
-blaze-html-templates            # Compile .html files into Meteor Blaze views
-reactive-var@1.0.11             # Reactive variable for tracker
-jquery@1.11.10                  # Helpful client-side library
-tracker@1.1.1                   # Meteor's client-side reactive programming library
+meteor-base@1.0.4                 # Packages every Meteor app needs to have
+mobile-experience@1.0.4           # Packages for a great mobile UX
+mongo@1.1.14                      # The database Meteor supports right now
+blaze-html-templates              # Compile .html files into Meteor Blaze views
+reactive-var@1.0.11               # Reactive variable for tracker
+jquery@1.11.10                    # Helpful client-side library
+tracker@1.1.1                     # Meteor's client-side reactive programming library
 
-standard-minifier-css@1.3.2     # CSS minifier run for production mode
-standard-minifier-js@1.2.1      # JS minifier run for production mode
-es5-shim@4.6.15                 # ECMAScript 5 compatibility for older browsers.
-ecmascript@0.6.1                # Enable ECMAScript2015+ syntax in app code
+standard-minifier-css@1.3.2       # CSS minifier run for production mode
+standard-minifier-js@1.2.1        # JS minifier run for production mode
+es5-shim@4.6.15                   # ECMAScript 5 compatibility for older browsers.
+ecmascript@0.6.1                  # Enable ECMAScript2015+ syntax in app code
 
-kadira:flow-router              # FlowRouter is a very simple router for Meteor
-kadira:blaze-layout             # Layout manager for blaze (works well with FlowRouter)
-less@2.7.8                      # Leaner CSS language
-
-
-#practicalmeteor:mocha             # A package for writing and running your meteor app and package tests with mocha
+#practicalmeteor:mocha            # A package for writing and running your meteor app and package tests with mocha
 practicalmeteor:chai
 johanbrook:publication-collector  # Test a Meteor publication by collecting its output
 dispatch:mocha-phantomjs
+#clinical:mocha-phantomjs
+
+momentjs:moment
+ddp-rate-limiter
+
+accounts-base
+accounts-password
 
 
-clinical:hl7-resource-allergy-intolerance
-clinical:hl7-resource-appointment
-clinical:hl7-resource-binary
-clinical:hl7-resource-bundle
-clinical:hl7-resource-careplan
-clinical:hl7-resource-clinical-impression
-clinical:hl7-resource-condition
-clinical:hl7-resource-coverage
-clinical:hl7-resource-datatypes
-clinical:hl7-resource-diagnostic-order
-clinical:hl7-resource-diagnostic-report
-clinical:hl7-resource-document-reference
-clinical:hl7-resource-device
-clinical:hl7-resource-encounter
-clinical:hl7-resource-family-member-history
-clinical:hl7-resource-goal
-clinical:hl7-resource-healthcare-service
-clinical:hl7-resource-imaging-study
-clinical:hl7-resource-immunization
-clinical:hl7-resource-location
-clinical:hl7-resource-medication
-clinical:hl7-resource-medication-order
-clinical:hl7-resource-medication-statement
-clinical:hl7-resource-message-header
-clinical:hl7-resource-observation
-clinical:hl7-resource-order
-clinical:hl7-resource-organization
-clinical:hl7-resource-patient
-clinical:hl7-resource-person
-clinical:hl7-resource-practitioner
-clinical:hl7-resource-procedure
-clinical:hl7-resource-procedure-request
-clinical:hl7-resource-questionnaire
-clinical:hl7-resource-questionnaire-response
-clinical:hl7-resource-related-person
-clinical:hl7-resource-risk-assessment
-clinical:hl7-resource-schedule
-clinical:hl7-resource-sequence
-clinical:hl7-resource-slot
-clinical:hl7-resource-specimen
+clinical:auto-resizing
+clinical:base-model
+clinical:collaborations
+clinical:csv
+clinical:device
+clinical:env
+clinical:extended-api
+clinical:fonts
+clinical:hipaa-logger
+clinical:keybindings
+clinical:roles
+clinical:schema-hydrator
+clinical:user-model
+
+clinical:hl7-fhir-resources
+
+anti:gagarin@=0.4.12

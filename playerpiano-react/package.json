@@ -3,11 +3,18 @@
   "private": true,
   "scripts": {
     "start": "meteor run",
-    "integration-tests": "meteor test --full-app --once --driver-package practicalmeteor:mocha",
-    "cli-integration-tests": "meteor test --full-app --driver-package dispatch:mocha-phantomjs"
+    "launch-chromedriver": "node_modules/chromedriver/bin/chromedriver",
+    "package-integration-tests-old": "gagarin packages/*/tests/gagarin/**/*.js --webdriver http://localhost:9515",
+    "distro-integration-tests-old": "gagarin tests/gagarin/**/*.js --webdriver http://localhost:9515",
+    "distro-integration-tests": "meteor test --full-app --driver-package dispatch:mocha-phantomjs --once"
   },
   "dependencies": {
     "babel-runtime": "^6.18.0",
     "meteor-node-stubs": "~0.2.3"
+  },
+  "devDependencies": {
+    "chromedriver": "2.25.1",
+    "selenium-standalone-jar": "3.0.1",
+    "gagarin": "0.4.12"
   }
 }

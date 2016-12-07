@@ -5,176 +5,196 @@ import { assert } from 'meteor/practicalmeteor:chai';
 import { Promise } from 'meteor/promise';
 import { $ } from 'meteor/jquery';
 
-// if (Meteor.isClient) {
-  describe('FHIR Resources exist on client', () => {
-    it('Meteor exists on client', () =>  {
-      assert.isObject(Meteor);
-    });
-    it('AllergyIntolerances', () =>  {
-      assert.isObject(AllergyIntolerances);
-    });
-    it('Appointments', () =>  {
-      assert.isObject(Appointments);
-    });
-    it('Binarys', () =>  {
-      assert.isObject(Binarys);
-    });
-    it('Bundles', () =>  {
-      assert.isObject(Bundles);
-    });
-    it('Careplans', () =>  {
-      assert.isObject(Careplans);
-    });
-    it('ClinicalImpressions', () =>  {
-      assert.isObject(ClinicalImpressions);
-    });
-    it('Conditions', () =>  {
-      assert.isObject(Conditions);
-    });
-    it('Coverages', () =>  {
-      assert.isObject(Coverages);
-    });
-    it('Datatypes', () =>  {
-      assert.isObject(Datatypes);
-    });
-    it('Devices', () =>  {
-      assert.isObject(Devices);
-    });
-    it('DiagnosticOrders', () =>  {
-      assert.isObject(DiagnosticOrders);
-    });
-    it('DiagnosticReports', () =>  {
-      assert.isObject(DiagnosticReports);
-    });
-    it('DocumentReferences', () =>  {
-      assert.isObject(DocumentReferences);
-    });
-    it('Encounters', () =>  {
-      assert.isObject(Encounters);
-    });
-    it('FamilyMemberHistories', () =>  {
-      assert.isObject(FamilyMemberHistories);
-    });
-    it('Goals', () =>  {
-      assert.isObject(Goals);
-    });
-    it('HealthcareServices', () =>  {
-      assert.isObject(HealthcareServices);
-    });
-    it('ImagingStudies', () =>  {
-      assert.isObject(ImagingStudies);
-    });
-    it('Immunizations', () =>  {
-      assert.isObject(Immunizations);
-    });
-    it('Locations', () =>  {
-      assert.isObject(Locations);
-    });
-    it('Medications', () =>  {
-      assert.isObject(Medications);
-    });
-    it('MedicationOrders', () =>  {
-      assert.isObject(MedicationOrders);
-    });
-    it('MedicationStatements', () =>  {
-      assert.isObject(MedicationStatements);
-    });
-    it('MessageHeaders', () =>  {
-      assert.isObject(MessageHeaders);
-    });
-    it('Observations', () =>  {
-      assert.isObject(Observations);
-    });
-    it('Orders', () =>  {
-      assert.isObject(Orders);
-    });
-    it('Organizations', () =>  {
-      assert.isObject(Organizations);
-    });
-    it('Patients', () =>  {
-      assert.isObject(Patients);
-    });
-    it('Practitioners', () =>  {
-      assert.isObject(Practitioners);
-    });
-    it('Procedures', () =>  {
-      assert.isObject(Procedures);
-    });
-    it('ProcedureRequests', () =>  {
-      assert.isObject(ProcedureRequests);
-    });
-    it('Questionnaires', () =>  {
-      assert.isObject(Questionnaires);
-    });
-    it('QuestionnaireResponses', () =>  {
-      assert.isObject(QuestionnaireResponses);
-    });
-    it('RelatedPersons', () =>  {
-      assert.isObject(RelatedPersons);
-    });
-    it('RiskAssessments', () =>  {
-      assert.isObject(RiskAssessments);
-    });
-    it('Schedules', () =>  {
-      assert.isObject(Schedules);
-    });
-    it('Sequences', () =>  {
-      assert.isObject(Sequences);
-    });
-    it('Slots', () =>  {
-      assert.isObject(Slots);
-    });
-    it('Specimens', () =>  {
-      assert.isObject(Specimens);
-    });
+
+
+
+runIsomorphicTests = function(){
+  it('Meteor exists on client', function()  {
+    assert.isObject(Meteor);
   });
-//}
-// if (Meteor.isServer) {
-//   describe('FHIR Resources exists on server', () => {
-//     it('Meteor exists on server', () => {
-//       assert.isObject(Meteor);
-//     });
-//   });
-// }
+  it('AllergyIntolerances', function()  {
+    assert.isObject(AllergyIntolerances);
+  });
+  it('Appointments', function()  {
+    assert.isObject(Appointments);
+  });
+  it('Binarys', function()  {
+    assert.isObject(Binarys);
+  });
+  it('Bundles', function()  {
+    assert.isObject(Bundles);
+  });
+  it('CarePlans', function()  {
+    assert.isObject(CarePlans);
+  });
+  it('ClinicalImpressions', function()  {
+    assert.isObject(ClinicalImpressions);
+  });
+  it('Conditions', function()  {
+    assert.isObject(Conditions);
+  });
+  it('Coverages', function()  {
+    assert.isObject(Coverages);
+  });
+  it('Datatypes - Address', function()  {
+    assert.isObject(Address);
+  });
+  it('Datatypes - Annotation', function()  {
+    assert.isObject(Annotation);
+  });
+  it('Datatypes - Attachment', function()  {
+    assert.isObject(Attachment);
+  });
+  it('Datatypes - Code', function()  {
+    assert.isString(Code);
+  });
+  it('Datatypes - Quantity', function()  {
+    assert.isObject(Quantity);
+  });
+  it('Datatypes - HumanName', function()  {
+    assert.isObject(HumanName);
+  });
+  it('Datatypes - Reference', function()  {
+    assert.isObject(Reference);
+  });
+  it('Datatypes - Period', function()  {
+    assert.isObject(Period);
+  });
+  it('Datatypes - Coding', function()  {
+    assert.isObject(Coding);
+  });
+  it('Datatypes - CodeableConcept', function()  {
+    assert.isObject(CodeableConcept);
+  });
+  it('Datatypes - Identifier', function()  {
+    assert.isObject(Identifier);
+  });
+  it('Datatypes - ContactPoint', function()  {
+    assert.isObject(ContactPoint);
+  });
+  it('Datatypes - Group', function()  {
+    assert.isObject(Group);
+  });
+  it('Datatypes - Conformance', function()  {
+    assert.isObject(Conformance);
+  });
+  it('Datatypes - Range', function()  {
+    assert.isObject(Range);
+  });
+  it('Datatypes - Ratio', function()  {
+    assert.isObject(Ratio);
+  });
+  it('Datatypes - SampledData', function()  {
+    assert.isObject(SampledData);
+  });
+  it('Datatypes - Signature', function()  {
+    assert.isObject(Signature);
+  });
+  it('Datatypes - Timing', function()  {
+    assert.isObject(Timing);
+  });
+  it('Devices', function()  {
+    assert.isObject(Devices);
+  });
+  it('DiagnosticOrders', function()  {
+    assert.isObject(DiagnosticOrders);
+  });
+  it('DiagnosticReports', function()  {
+    assert.isObject(DiagnosticReports);
+  });
+  it('DocumentReferences', function()  {
+    assert.isObject(DocumentReferences);
+  });
+  it('Encounters', function()  {
+    assert.isObject(Encounters);
+  });
+  it('FamilyMemberHistories', function()  {
+    assert.isObject(FamilyMemberHistories);
+  });
+  it('Goals', function()  {
+    assert.isObject(Goals);
+  });
+  it('HealthcareServices', function()  {
+    assert.isObject(HealthcareServices);
+  });
+  it('ImagingStudies', function()  {
+    assert.isObject(ImagingStudies);
+  });
+  it('Immunizations', function()  {
+    assert.isObject(Immunizations);
+  });
+  it('Locations', function()  {
+    assert.isObject(Locations);
+  });
+  it('Medications', function()  {
+    assert.isObject(Medications);
+  });
+  it('MedicationOrders', function()  {
+    assert.isObject(MedicationOrders);
+  });
+  it('MedicationStatements', function()  {
+    assert.isObject(MedicationStatements);
+  });
+  it('MessageHeaders', function()  {
+    assert.isObject(MessageHeaders);
+  });
+  it('Observations', function()  {
+    assert.isObject(Observations);
+  });
+  it('Orders', function()  {
+    assert.isObject(Orders);
+  });
+  it('Organizations', function()  {
+    assert.isObject(Organizations);
+  });
+  it('Patients', function()  {
+    assert.isObject(Patients);
+  });
+  it('Persons', function()  {
+    assert.isObject(Persons);
+  });
+  it('Practitioners', function()  {
+    assert.isObject(Practitioners);
+  });
+  it('Procedures', function()  {
+    assert.isObject(Procedures);
+  });
+  it('ProcedureRequests', function()  {
+    assert.isObject(ProcedureRequests);
+  });
+  it('Questionnaires', function()  {
+    assert.isObject(Questionnaires);
+  });
+  it('QuestionnaireResponses', function()  {
+    assert.isObject(QuestionnaireResponses);
+  });
+  it('RelatedPersons', function()  {
+    assert.isObject(RelatedPersons);
+  });
+  it('RiskAssessments', function()  {
+    assert.isObject(RiskAssessments);
+  });
+  it('Schedules', function()  {
+    assert.isObject(Schedules);
+  });
+  it('Sequences', function()  {
+    assert.isObject(Sequences);
+  });
+  it('Slots', function()  {
+    assert.isObject(Slots);
+  });
+  it('Specimens', function()  {
+    assert.isObject(Specimens);
+  });
+}
 
-
-// AllergyIntolerances
-// Appointments
-// Binarys
-// Bundles
-// Careplans
-// ClinicalImpressions
-// Conditions
-// Coverages
-// Datatypes
-// Devices
-// DiagnosticOrders
-// DiagnosticReports
-// DocumentReferences
-// Encounters
-// FamilyMemberHistories
-// Goals
-// HealthcareServices
-// ImagingStudies
-// Immunizations
-// Locations
-// Medications
-// MedicationOrders
-// MedicationStatements
-// MessageHeaders
-// Observations
-// Orders
-// Organizations
-// Patients
-// Practitioners
-// Procedures
-// ProcedureRequests
-// Questionnaires
-// QuestionnaireResponses
-// RelatedPersons
-// RiskAssessments
-// Schedules
-// Sequences
-// Slots
-// Specimens
-//
+if (Meteor.isClient) {
+  describe('FHIR Resources exist on client', function() {
+    runIsomorphicTests();
+  });
+}
+if (Meteor.isServer) {
+  describe('FHIR Resources exists on server', function() {
+    runIsomorphicTests();
+  });
+}

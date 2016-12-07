@@ -28,11 +28,12 @@ cd ../playerpiano
 starrynight fetch
 ````
 
+
 ==============================
-#### Running Verification Tests across the Release Track
+#### Running Verification Tests across the Release Track (React)
 
 ````bash
-cd ../playerpiano
+cd ../playerpiano-react
 
 # fetch the latest packages we want to run QA tests on
 starrynight fetch
@@ -40,12 +41,12 @@ starrynight fetch
 # install dev dependencies
 meteor npm install
 
-## launch selenium
-meteor npm run-script launch-chromedriver
-
 ## run tests on framework, and publish to continuous integration servers
-meteor npm run-script package-verification-tests
+#meteor npm run-script cli-integration-tests
+
+meteor npm run-script package-integration-tests
 ````
+
 
 
 ====================================================
