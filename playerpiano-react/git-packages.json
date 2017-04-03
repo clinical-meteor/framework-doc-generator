@@ -48,6 +48,9 @@
   "clinical:hl7-resource-appointment": {
     "git": "https://github.com/clinical-meteor/hl7-resource-appointment.git"
   },
+  "clinical:hl7-resource-audit-event": {
+    "git": "https://github.com/clinical-meteor/hl7-resource-audit-event.git"
+  },
   "clinical:hl7-resource-binary": {
     "git": "https://github.com/clinical-meteor/hl7-resource-binary.git"
   },

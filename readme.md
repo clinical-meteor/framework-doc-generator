@@ -14,9 +14,9 @@ Use this app to generate the API documentation for a framework or track.
 # clone the repo to your local workstation
 git clone http://github.com/clinical-meteor/framework-doc-generator release-docs
 
-# install the clinical-jsdoc
-cd meteor-jsdoc
-npm install -g .     # may need sudo
+## install the clinical-jsdoc
+#cd meteor-jsdoc
+#npm install -g .     # may need sudo
 
 # initialize your submodules if needed
 #git submodule foreach git pull origin master
@@ -85,6 +85,13 @@ meteor-jsdoc start
 cd ../webapp
 meteor deploy release-docs.meteor.com
 ````
+
+==============================
+#### Publishing  
+
+```bash
+meteor publish-release clinical.meteor.rc17.json
+```
 
 
 =====================================

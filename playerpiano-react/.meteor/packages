@@ -17,10 +17,10 @@ standard-minifier-js@1.2.1        # JS minifier run for production mode
 es5-shim@4.6.15                   # ECMAScript 5 compatibility for older browsers.
 ecmascript@0.6.1                  # Enable ECMAScript2015+ syntax in app code
 
-#practicalmeteor:mocha            # A package for writing and running your meteor app and package tests with mocha
+dispatch:mocha
 practicalmeteor:chai
 johanbrook:publication-collector  # Test a Meteor publication by collecting its output
-dispatch:mocha-phantomjs
+#dispatch:mocha-phantomjs
 #clinical:mocha-phantomjs
 
 momentjs:moment
